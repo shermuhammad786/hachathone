@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Button, Progress, Typography, Input, Modal } from "antd";
 import questionsJson from "./dummyQuiz.json";
 import "./Quiz.css";
@@ -22,13 +22,14 @@ const QuizApp = () => {
   const [maxPer, setMaxPer] = useState(100);
   const [minPer, setMinPer] = useState(0);
   const [skippedQuestions, setSkippedQuestions] = useState([]);
+  const [flaggedQuestions, setFlaggedQuestions] = useState([]);
   const [feedback, setFeedback] = useState("");
   const [isFeedbackModalVisible, setIsFeedbackModalVisible] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [isQuizActive, setIsQuizActive] = useState(true);
   const [quizEnded, setQuizEnded] = useState(false);
   const [showSkippedQuestions, setShowSkippedQuestions] = useState(false);
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((prevSeconds) => {
@@ -111,31 +112,56 @@ const QuizApp = () => {
     setSelectedOption(null);
 
     const totalQuestions = questions.length + skippedQuestions.length;
-    const answeredQuestions = currentQuestionIndex + 1 + skippedQuestions.length - skippedQuestions.length + (showSkippedQuestions ? skippedQuestions.length : 0);
+    const answeredQuestions =
+      currentQuestionIndex +
+      1 +
+      skippedQuestions.length -
+      skippedQuestions.length +
+      (showSkippedQuestions ? skippedQuestions.length : 0);
     setMinPer((correctAnswers * 100) / totalQuestions);
     setCurrentPer((correctAnswers * 100) / answeredQuestions);
     setMaxPer(
       ((correctAnswers + (totalQuestions - answeredQuestions)) * 100) /
-      totalQuestions
+        totalQuestions
     );
-  }, [selectedOption, correctAnswers, currentQuestionIndex, questions.length, skippedQuestions.length, showSkippedQuestions]);
+  }, [
+    selectedOption,
+    questions,
+    correctAnswers,
+    currentQuestionIndex,
+    skippedQuestions.length,
+    showSkippedQuestions,
+  ]);
 
-
-  const handleOptionSelect = useCallback(
-    (option) => {
-      setSelectedOption(option);
-      setClicked(true);
-    },
-    []
-  );
+  const handleOptionSelect = useCallback((option) => {
+    setSelectedOption(option);
+    setClicked(true);
+  }, []);
 
   const handleSkipQuestion = useCallback(() => {
-    setSkippedQuestions((prev) => [
-      ...prev,
-      questions[currentQuestionIndex],
-    ]);
+    setSkippedQuestions((prev) => [...prev, questions[currentQuestionIndex]]);
     handleNextQuestion();
   }, [currentQuestionIndex, handleNextQuestion, questions]);
+
+  const handleFlagQuestion = useCallback(() => {
+    setFlaggedQuestions((prev) => {
+      const currentQuestion = questions[currentQuestionIndex];
+
+      const isFlagged = prev.find(
+        (question) => question.correct_answer === currentQuestion.correct_answer
+      );
+      console.log(isFlagged, "=>>> is flagged");
+      if (isFlagged) {
+        return prev.filter(
+          (question) =>
+            question.correct_answer !== currentQuestion.correct_answer
+        );
+      } else {
+        return [...prev, currentQuestion];
+      }
+    });
+    console.log(flaggedQuestions, "=>>> flagged questions");
+  }, [currentQuestionIndex, questions, flaggedQuestions]);
 
   const handleFeedbackChange = (e) => {
     setFeedback(e.target.value);
@@ -147,7 +173,7 @@ const QuizApp = () => {
   };
 
   const handleSubmitQuiz = () => {
-    const totalScore = correctAnswers * 5; 
+    const totalScore = correctAnswers * 5;
     console.log("Quiz submitted. Total score:", totalScore);
     setQuizCompleted(true);
   };
@@ -189,8 +215,7 @@ const QuizApp = () => {
       </div>
       <div className="first-row">
         <Title level={3}>
-          Question {currentQuestionIndex + 1} /{" "}
-          {questionsList.length}
+          Question {currentQuestionIndex + 1} / {questionsList.length}
         </Title>
         <span>
           <FieldTimeOutlined />
@@ -202,8 +227,8 @@ const QuizApp = () => {
           style={{
             color:
               questionsList[currentQuestionIndex]?.difficulty === "easy" ||
-                questionsList[currentQuestionIndex]?.difficulty === "medium" ||
-                questionsList[currentQuestionIndex]?.difficulty === "hard"
+              questionsList[currentQuestionIndex]?.difficulty === "medium" ||
+              questionsList[currentQuestionIndex]?.difficulty === "hard"
                 ? "#FCA120"
                 : "#dedede",
           }}
@@ -213,7 +238,7 @@ const QuizApp = () => {
           style={{
             color:
               questionsList[currentQuestionIndex]?.difficulty === "medium" ||
-                questionsList[currentQuestionIndex]?.difficulty === "hard"
+              questionsList[currentQuestionIndex]?.difficulty === "hard"
                 ? "#FCA120"
                 : "#dedede",
           }}
@@ -231,9 +256,7 @@ const QuizApp = () => {
       </div>
       <div className="second-row">
         <span className="question">
-          {decodeURIComponent(
-            questionsList[currentQuestionIndex]?.question
-          )}
+          {decodeURIComponent(questionsList[currentQuestionIndex]?.question)}
         </span>
       </div>
       <div className="main-container">
@@ -263,6 +286,9 @@ const QuizApp = () => {
         className="next-button"
         style={{ position: "relative", left: 0, top: 0, bottom: 0, right: 0 }}
       >
+        <Button onClick={handleFlagQuestion} className="flagButton">
+          Flag
+        </Button>
         <Button
           onClick={handleNextQuestion}
           className="button"
@@ -302,7 +328,9 @@ const QuizApp = () => {
                   You scored {correctAnswers} out of {questions.length}
                 </p>
                 <Progress
-                  percent={Math.floor((correctAnswers * 100) / questions.length)}
+                  percent={Math.floor(
+                    (correctAnswers * 100) / questions.length
+                  )}
                   status="active"
                   type="circle"
                   size={130}
