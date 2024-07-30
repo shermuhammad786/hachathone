@@ -35,8 +35,10 @@ const QuizSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    duration: {
+    time_limits: {
         type: String,
         require: true
     },
-})
+},
+    { timestamps: true }
+)
