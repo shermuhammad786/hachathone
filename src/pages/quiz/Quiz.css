@@ -160,6 +160,13 @@ left: 40%;
     padding: auto;
     min-height: 100px;
 }
+.next-button .flagButton{
+    display: block;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    width: 100px;
+    height: 35px;
+}
 .progress-container {
     border: 1px solid transparent;
     width: 640px;
