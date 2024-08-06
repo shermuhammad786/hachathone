@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "inde.x.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon src/index.js",
@@ -14,7 +14,10 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "passport": "^0.7.0"
   }
 }

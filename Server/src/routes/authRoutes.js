@@ -1,9 +1,9 @@
 import express from "express";
-import { changePassword, changePasswordSuperAdmin, emailVerify, forgotPassword, login, loginSuperAdmin, refreshSuperAdminToken, refreshToken, resetPassword, signup, verifyOTP } from "../controllers/auth";
-import { validateRequest } from "../middlewares/validateRequest"
-import { emailValidate, signUpSchema } from "../joi/signup";
-import { jwtAuth } from "../middlewares/jwt.middleware";
-import { authorizeRole } from "../middlewares/user.identification";
+import { changePassword, changePasswordSuperAdmin, emailVerify, forgotPassword, login, loginSuperAdmin, refreshSuperAdminToken, refreshToken, resetPassword, signup, verifyOTP } from "../controllers/auth.js";
+import { validateRequest } from "../middlewares/validateRequest.js"
+import { emailValidate, signUpSchema } from "../joi/signup.js";
+import { jwtAuth } from "../middlewares/jwt.middleware.js";
+import { authorizeRole } from "../middlewares/identification.js";
 
 
 const authRoutes = express.Router();
