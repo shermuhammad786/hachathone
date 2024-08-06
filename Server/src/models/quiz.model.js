@@ -42,3 +42,5 @@ const QuizSchema = new mongoose.Schema({
 },
     { timestamps: true }
 )
+
+export const QuizModel = mongoose.model("Quiz", QuizSchema)

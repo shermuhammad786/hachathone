@@ -1,5 +1,5 @@
 import e from "express";
-import { createQuiz } from "../controller/quiz.controller.js";
+import { createQuiz } from "../controllers/quiz.controller.js";
 const quizRouter = e.Router();
 
 
