@@ -1,13 +1,13 @@
 import bcrypt from "bcrypt";
-import { sendMessage } from "./sendMessage";
+import { sendMessage } from "./sendMessage.js";
 
-export const bcrypt_hashingData = (data: string) => {
+export const bcryptHashingData = (data) => {
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(data, salt)
     return hash;
 }
 
-export const bcrypt_compareData = (data: string, userData: string) => {
+export const bcryptCompareData = (data, userData) => {
   const matching = bcrypt.compareSync(data,userData);
   if(matching){
     return sendMessage(true,"data matched")

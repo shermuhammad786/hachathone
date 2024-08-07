@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { environments } from '../environments/environments.js';
 import passport from 'passport';
 import { sendMessage } from '../helpers/sendMessage.js';
-import { logger } from '..';
+import { logger } from '../index.js';
 
 dotenv.config();
 const { sign } = pkg;

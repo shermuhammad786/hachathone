@@ -1,4 +1,4 @@
-import { roleTableModel } from "../models/role.model"
+import { roleTableModel } from "../models/roleModel.js"
 
 export const authorizeRole = (role) => {
     return async (req, res, next) => {
