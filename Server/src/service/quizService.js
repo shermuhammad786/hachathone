@@ -41,42 +41,40 @@ class QuizService {
     getQuizService = async (req) => {
 
         const { limit = 10, pageNo = 1, search = "", orderby, sortByField, locationRestriction, tabSwitchingRestriction, customMode } = req.query;
-        console.log('req.query: ', req.query);
+        
 
-        const conditions = [];
-
+        let conditions = [];
         conditions.push({ title: { $regex: search, $options: 'i' } });
         conditions.push({ course: { $regex: search, $options: 'i' } });
         conditions.push({ duration: { $regex: search, $options: 'i' } });
-        let query = {}
+
+        let query = {};
         if (conditions.length > 0) {
-            query.$or = conditions
-        } else {
-            query = conditions
+            query.$or = conditions;
         }
 
-        if (locationRestriction) {
-            query.push(locationRestriction)
+
+        if (locationRestriction === "false" || locationRestriction === "true") {
+            
+            query.locationRestriction = locationRestriction
         }
-        if (tabSwitchingRestriction) {
-            query.push(tabSwitchingRestriction)
+        if (tabSwitchingRestriction === "false" || tabSwitchingRestriction === "true") {
+            query.tabSwitchingRestriction = tabSwitchingRestriction
         }
-        if (customMode) {
-            query.push(tabSwitchingRestriction)
+        if (customMode === "false" || customMode === "true") {
+            query.customMode = customMode
         }
         const sort = {};
         sort[sortByField] = orderby === "asc" ? 1 : -1
 
 
 
-
-        console.log('quiz: ',);
-        const quiz = await QuizModel.find({ locationRestriction: false }).limit(limit).skip(parseInt(limit) * (pageNo - 1)).sort(sort).lean()
+        const quiz = await QuizModel.find(query).limit(limit).skip(parseInt(limit) * (pageNo - 1)).sort(sort).lean()
 
         if (quiz) {
-            return (sendMessage(true, "Quiz created successfully", quiz))
+            return (sendMessage(true, "Quiz getted successfully", quiz))
         } else {
-            return sendMessage(false, "Quiz not updated")
+            return sendMessage(false, "Quiz not getted")
         }
     }
 }

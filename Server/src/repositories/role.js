@@ -1,20 +1,20 @@
-import { roleTableModel } from "../models/role.model";
+import { roleTableModel } from "../models/role.model.js";
 
 
 class RoleTable{
-   RoleById = async(id:any)=>{
+   RoleById = async(id)=>{
         const foundUser = await roleTableModel.findById(id);
         return foundUser
     }
-   RoleByIdAndUpdate = async(id:any,data:any)=>{
+   RoleByIdAndUpdate = async(id,data)=>{
         const foundUser = await roleTableModel.findByIdAndUpdate(id,data);
         return foundUser
     }
-   RoleByIdAndDelete = async(id:any)=>{
+   RoleByIdAndDelete = async(id)=>{
         const foundUser = await roleTableModel.findByIdAndDelete(id);
         return foundUser
     }
-    UserByName = async(roleName:any)=>{
+    UserByName = async(roleName)=>{
         const foundUser = await roleTableModel.findOne({roleName});
         return foundUser
     }
