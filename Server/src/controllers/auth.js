@@ -1,12 +1,10 @@
-
 import { sendMessage } from "../helpers/sendMessage.js";
-
 import Service from "../service/auth.js";
-
+import { logger } from "../index.js";
 import { sendEmail } from "../helpers/sendEmail.js";
 
 const userService = new Service();
-const { verifyEmail, verifyotp, signUp, logIn, forgotpassword, resetpassword, changepassword, refresh_token, refresh_super_admin_token, logIn_super_admin, changepassword_super_admin } = userService
+const { verifyEmailService, verifyotpService, signUpService, logInService, forgotpasswordService, resetpasswordService, changepasswordService, refreshTokenService, refreshSuperAdminTokenService, logInSuperAdminService, changepasswordSuperAdminService, setpasswordService } = userService
 
 
 
@@ -15,7 +13,7 @@ export const emailVerify = async (req, res, next) => {
 
     try {
         const { email } = req.body;
-        const verify = await verifyEmail(email);
+        const verify = await verifyEmailService(email);
         const template = "signup-verify";
         if (verify?.status) {
             const { replacements, email, id } = verify?.data;
@@ -37,12 +35,10 @@ export const emailVerify = async (req, res, next) => {
 
 }
 
-
-
 export const verifyOTP = async (req, res, next) => {
     try {
         const { email, otp } = req.body;
-        const verify = await verifyotp(email, otp);
+        const verify = await verifyotpService(email, otp);
         if (verify.status) {
             logger.info(`${verify.message} ${verify.data.email}`)
             return res.status(200).json(verify);
@@ -56,12 +52,10 @@ export const verifyOTP = async (req, res, next) => {
     }
 }
 
-
-
 export const signup = async (req, res, next) => {
     try {
         const { name, userName, email, password, otpKey } = req.body
-        const user = await signUp(name, userName, email, password, otpKey)
+        const user = await signUpService(name, userName, email, password, otpKey)
         if (user?.status) {
             logger.info(`${user?.message} ${user?.data.email}`)
             return res.status(200).json(user);
@@ -76,24 +70,21 @@ export const signup = async (req, res, next) => {
     }
 };
 
-
-
 export const login = async (req, res, next) => {
 
     try {
         const { email, password } = req.body
-        await logIn(req, res)
+        await logInService(req, res)
 
     } catch (error) {
         res.status(500).json(sendMessage(false, "Internal server error"))
     }
 }
 
-
 export const forgotPassword = async (req, res, next) => {
     try {
         const { email } = req.body;
-        const forgot = await forgotpassword(email);
+        const forgot = await forgotpasswordService(email);
         const template = "forget-password";
 
         if (forgot?.status) {
@@ -116,11 +107,10 @@ export const forgotPassword = async (req, res, next) => {
     }
 }
 
-
 export const resetPassword = async (req, res, next) => {
     try {
         const { newPassword, conformPassword, token, email } = req.body;
-        const reset = await resetpassword(newPassword, conformPassword, token, email);
+        const reset = await resetpasswordService(newPassword, conformPassword, token, email);
         if (reset?.status) {
             logger.info(`${reset.message} ${reset.data.email}`);
             return res.status(200).json(reset)
@@ -135,13 +125,11 @@ export const resetPassword = async (req, res, next) => {
     }
 }
 
-
-
 export const changePassword = async (req, res, next) => {
     try {
         const { authorization } = req.headers;
         const { oldPassword, newPassword, conformPassword, email } = req.body;
-        const change = await changepassword(req, oldPassword, newPassword, conformPassword, email)
+        const change = await changepasswordService(req, oldPassword, newPassword, conformPassword, email)
         if (change?.status) {
             logger.info(`${change.message} ${change.data.email}`)
             return res.status(200).json(change)
@@ -159,7 +147,7 @@ export const refreshToken = async (req, res, next) => {
     try {
         const { token } = req.params;
         const { email } = req.body
-        const refresh = await refresh_token(token, email)
+        const refresh = await refreshTokenService(token, email)
         if (refresh.status) {
             logger.info(`${refresh.message} ${refresh?.data?.email}`)
             res.status(200).json(sendMessage(true, refresh.message, refresh.data))
@@ -172,12 +160,31 @@ export const refreshToken = async (req, res, next) => {
     }
 }
 
+export const setPassword = async (req, res, next) => {
+    try {
+        const reset = await setpasswordService(req);
+
+        if (reset?.status) {
+            logger.info(`${reset.message} ${reset.data.email}`);
+            return res.status(200).json(reset)
+        } else {
+            logger.error(`${reset.message} ${reset.data.email}`);
+            return res.status(403).json(reset);
+        }
+
+    } catch (error) {
+        logger.error("Internal server error", error);
+        res.status(500).json(sendMessage(false, "Internal server error", error));
+    }
+}
+
+
 //SUPER ADMIN
 export const refreshSuperAdminToken = async (req, res, next) => {
     try {
         const { token } = req.params;
         const { email } = req.body
-        const refresh = await refresh_super_admin_token(token, email)
+        const refresh = await refreshSuperAdminTokenService(token, email)
         if (refresh.status) {
             logger.info(`${refresh.message} ${refresh?.data?.email}`)
             res.status(200).json(sendMessage(true, refresh.message, refresh.data))
@@ -193,18 +200,17 @@ export const refreshSuperAdminToken = async (req, res, next) => {
 export const loginSuperAdmin = async (req, res, next) => {
 
     try {
-        await logIn_super_admin(req, res)
+        await logInSuperAdminService(req, res)
 
     } catch (error) {
         res.status(500).json(sendMessage(false, "Internal server error"))
     }
 }
 
-
 export const changePasswordSuperAdmin = async (req, res, next) => {
     try {
         const { oldPassword, newPassword, conformPassword, email } = req.body;
-        const change = await changepassword_super_admin(req, oldPassword, newPassword, conformPassword, email)
+        const change = await changepasswordSuperAdminService(req, oldPassword, newPassword, conformPassword, email)
         if (change?.status) {
             logger.info(`${change.message} ${change.data.email}`)
             return res.status(200).json(change)
@@ -213,6 +219,6 @@ export const changePasswordSuperAdmin = async (req, res, next) => {
             return res.status(403).json(change)
         }
     } catch (error) {
-        return res.status(500).json(sendMessage(false, "Interanal server error", null))
+        return res.status(500).json(sendMessage(false, "Interanal server error", error))
     }
 }

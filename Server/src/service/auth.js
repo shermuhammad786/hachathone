@@ -1,22 +1,20 @@
-import { bcrypt_compareData, bcrypt_hashingData } from "../helpers/bcrypt";
-import { sendMessage } from "../helpers/sendMessage";
-import { OTP } from "../models/otp.model";
-import User from "../repositories/user";
-import { UserModel } from "../models/user.model";
+import { bcryptCompareData, bcryptHashingData } from "../helpers/bcrypt.js";
+import { sendMessage } from "../helpers/sendMessage.js";
+import { OTP } from "../models/otp.model.js";
+import User from "../repositories/user.js";
+import { UserModel } from "../models/user.model.js";
 import passport from "passport";
-import { RefreshTokenModel } from "../models/refreshToken.model";
-import jwt, { verify } from "jsonwebtoken";
-import { environments } from "../environments/environments";
-import { GenerateToken } from "../middlewares/jwt.middleware";
-import { logger } from "../index";
-import { SessionHistoryModel } from "../models/session.history";
-import { TenantModel } from "../models/tenant.model";
+import jwt from "jsonwebtoken";
+import { environments } from "../environments/environments.js";
+import { GenerateToken } from "../middlewares/jwt.middleware.js";
+import { logger } from "../index.js";
+import { RefreshTokenModel } from "../models/refreshToken.model.js";
 
-
+const { verify } = jwt
 
 
 const userModel = new User();
-const { findOTPUserByEmail, findUserByEmail, findUserById, findUserByUserName } = userModel;
+const { OTPUserByEmail, UserByEmail, UserById, UserByUserName } = userModel;
 
 
 class Service {
@@ -24,24 +22,24 @@ class Service {
 
 
     //SUPER ADMIN
-    refresh_super_admin_token = async (token, email) => {
+    refreshSuperAdminTokenService = async (token, email) => {
 
-        const { SUPER_ADMIN_ACCESS_TOKEN_KEY, SUPER_ADMIN_ACCESS_TOKEN_EXPIRE, SUPER_ADMIN_REFRESH_TOKEN_KEY } = environments
-        const refreshToken = verify(token, SUPER_ADMIN_REFRESH_TOKEN_KEY, (err, decode) => {
+        const { adminAccessTokenKey, adminAccessTokenExpireTime, adminRefreshTokenKey } = environments
+        const refreshToken = verify(token, adminRefreshTokenKey, (err, decode) => {
             if (err) {
                 return sendMessage(false, "login in expire", { err });
             };
             if (decode) {
                 const payload = { id: decode.id, email: decode.email };
-                const accessToken = jwt.sign(payload, SUPER_ADMIN_ACCESS_TOKEN_KEY, { expiresIn: SUPER_ADMIN_ACCESS_TOKEN_EXPIRE });
+                const accessToken = jwt.sign(payload, adminAccessTokenKey, { expiresIn: adminAccessTokenExpireTime });
                 return sendMessage(true, "access token refreshed", { token: accessToken, ...payload });
             };
         });
         return refreshToken
     }
 
-    logIn_super_admin = async (req, res) => {
-        const { SUPER_ADMIN_ACCESS_TOKEN_EXPIRE, SUPER_ADMIN_ACCESS_TOKEN_KEY, SUPER_ADMIN_REFRESH_TOKEN_EXPIRE, SUPER_ADMIN_REFRESH_TOKEN_KEY } = environments;
+    logInSuperAdminService = async (req, res) => {
+        const { adminAccessTokenExpireTime, adminAccessTokenKey, adminRefreshTokenExpireTime, adminRefreshTokenKey } = environments;
         try {
             await passport.authenticate('local', { session: false }, async (err, user, info) => {
                 if (err || !user) {
@@ -52,8 +50,8 @@ class Service {
                     });
                 }
                 const payload = { id: user._id, email: user.email };
-                const accessToken = jwt.sign(payload, SUPER_ADMIN_ACCESS_TOKEN_KEY, { expiresIn: SUPER_ADMIN_ACCESS_TOKEN_EXPIRE });
-                const refreshToken = jwt.sign(payload, SUPER_ADMIN_REFRESH_TOKEN_KEY, { expiresIn: SUPER_ADMIN_REFRESH_TOKEN_EXPIRE });
+                const accessToken = jwt.sign(payload, adminAccessTokenKey, { expiresIn: adminAccessTokenExpireTime });
+                const refreshToken = jwt.sign(payload, adminRefreshTokenKey, { expiresIn: adminRefreshTokenExpireTime });
 
                 const tokens = new RefreshTokenModel({
                     accessToken: accessToken,
@@ -62,7 +60,7 @@ class Service {
                 })
                 const savedTokens = await tokens.save();
 
-                const expireDate = Number(environments.SESSION_HISTORY_EXPIRE)
+                const expireDate = (environments.sessionHistoryExpireTime)
                 const SessionHistory = new SessionHistoryModel({
                     token: accessToken,
                     userId: user._id,
@@ -87,9 +85,7 @@ class Service {
         }
     }
 
-
-
-    changepassword_super_admin = async (req, oldPassword, newPassword, conformPassword, email) => {
+    changepasswordSuperAdminService = async (req, oldPassword, newPassword, conformPassword, email) => {
         if (!oldPassword || !newPassword || !conformPassword || !email) {
             return (sendMessage(false, "Please fill all the fields", { oldPassword, newPassword, conformPassword, email }))
         }
@@ -100,17 +96,17 @@ class Service {
         if (req.user) {
             const { id } = req.user
 
-            const user = await findUserById(id);
-            console.log('user: ', user);
+            const user = await UserById(id);
+
             if (!user) {
                 return (sendMessage(false, "User not found", { oldPassword, newPassword, conformPassword, email }))
             }
             if (user) {
-                const verifyPassword = bcrypt_compareData(oldPassword, user.password)
-                console.log('verifyPassword: ', verifyPassword);
+                const verifyPassword = bcryptCompareData(oldPassword, user.password)
+
                 if (verifyPassword.status) {
-                    console.log('verifyPassword.status: ', verifyPassword.status);
-                    user.password = bcrypt_hashingData(newPassword);
+
+                    user.password = bcryptHashingData(newPassword);
                     await user.save();
                     return (sendMessage(true, "Password has been changed", user))
                 } else {
@@ -120,23 +116,24 @@ class Service {
         }
     }
 
+
     //TENANT ADMIN AND USERS
-    verifyEmail = async (email) => {
-        const generateRandomNumber = (min, max) => Math.random() * (max - min) + min;
+    verifyEmailService = async (email) => {
+        const generateRandom = (min, max) => Math.random() * (max - min) + min;
 
         if (!email) return sendMessage(false, "All fields are Required")
 
-        const findOtp = await OTP.findOne({ email: email });
-        const otpkey = generateRandomNumber(1111, 9999).toFixed();
-        const hashOtp = bcrypt_hashingData(otpkey);
+        const Otp = await OTP.findOne({ email: email });
+        const otpkey = generateRandom(1111, 9999).toFixed();
+        const hashOtp = bcryptHashingData(otpkey);
         const replacements = {
             code: otpkey,
         };
-        if (findOtp) {
-            findOtp.otpKey = hashOtp;
-            findOtp.expireIn = Date.now() + 30000;
-            findOtp.expire = false
-            const savedOTP = await findOtp.save();
+        if (Otp) {
+            Otp.otpKey = hashOtp;
+            Otp.expireIn = Date.now() + 30000;
+            Otp.expire = false
+            const savedOTP = await Otp.save();
             return sendMessage(true, "OTP resended", { email: savedOTP.email, id: savedOTP._id, replacements });
         }
 
@@ -155,33 +152,33 @@ class Service {
     }
 
 
-    verifyotp = async (email, otp) => {
+    verifyotpService = async (email, otp) => {
 
-        const findUser = await OTP.findOne({ email: email });
+        const User = await OTP.findOne({ email: email });
 
-        if (findUser && !findUser.used) {
+        if (User && !User.used) {
 
-            if (findUser.expire) {
-                return sendMessage(false, "OPT has been expired", findUser);
+            if (User.expire) {
+                return sendMessage(false, "OPT has been expired", User);
             }
 
-            if (findUser.expireIn < Date.now()) {
-                findUser.expire = true;
-                await findUser.save();
-                return sendMessage(false, "OPT has been expired", findUser);
+            if (User.expireIn < Date.now()) {
+                User.expire = true;
+                await User.save();
+                return sendMessage(false, "OPT has been expired", User);
             }
-            const matchOTP = await bcrypt_compareData(otp, findUser.otpKey);
+            const matchOTP = await bcryptCompareData(otp, User.otpKey);
 
             if (matchOTP.status) {
 
-                return (sendMessage(true, "otp matched Successfully", findUser));
+                return (sendMessage(true, "otp matched Successfully", User));
 
             } else {
-                return (sendMessage(false, "otp not matched", findUser))
+                return (sendMessage(false, "otp not matched", User))
 
             }
-        } else if (findUser && findUser.used) {
-            return (sendMessage(false, "opt is aleady verified", findUser))
+        } else if (User && User.used) {
+            return (sendMessage(false, "opt is aleady verified", User))
 
         }
         else {
@@ -191,16 +188,16 @@ class Service {
     }
 
 
-    signUp = async (name, userName, email, password, otpKey) => {
+    signUpService = async (name, userName, email, password, otpKey) => {
 
         if (!name || !userName || !email || !password || !otpKey) return (sendMessage(false, "Please fill all fields"));
 
 
 
-        const user = await findUserByEmail(email);
-        const OTPUser = await findOTPUserByEmail(email);
+        const user = await UserByEmail(email);
+        const OTPUser = await OTPUserByEmail(email);
         if (OTPUser) {
-            const checkOtp = bcrypt_compareData(otpKey, OTPUser?.otpKey);
+            const checkOtp = bcryptCompareData(otpKey, OTPUser.otpKey);
             if (!checkOtp.status) {
                 return (sendMessage(false, "please put the correct otp", OTPUser));
             }
@@ -226,8 +223,9 @@ class Service {
     }
 
 
-    logIn = async (req, res) => {
-        const { JWT_SECRET_KEY, JWT_SECRET_KEY_EXPIRE, JWT_REFRESH_SECRET_KEY, JWT_REFRESH_SECRET_KEY_EXPIRE } = environments;
+    logInService = async (req, res) => {
+        const { jwtAccessTokenKey, jwtAccessTokenExpireTime, jwtRefreshTokenKey, jwtRefreshTokenExpireTime } = environments;
+        console.log('jwtAccessTokenKey: ', jwtAccessTokenKey);
         try {
             await passport.authenticate('local', { session: false }, async (err, user, info) => {
                 if (err || !user) {
@@ -239,12 +237,12 @@ class Service {
                 }
 
                 const payload = { id: user.id, email: user.email };
-                const findUser = await findUserById(user.id)
-                if (!findUser.activeStatus) {
+                const User = await UserById(user.id)
+                if (!User.activeStatus) {
                     return res.status(403).json({ status: false, message: "Plase first click on the link sent to your email to complete you registration" })
                 }
-                const accessToken = jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: JWT_SECRET_KEY_EXPIRE });
-                const refreshToken = jwt.sign(payload, JWT_REFRESH_SECRET_KEY, { expiresIn: JWT_REFRESH_SECRET_KEY_EXPIRE });
+                const accessToken = jwt.sign(payload, jwtAccessTokenKey, { expiresIn: jwtAccessTokenExpireTime });
+                const refreshToken = jwt.sign(payload, jwtRefreshTokenKey, { expiresIn: jwtRefreshTokenExpireTime });
 
                 const tokens = new RefreshTokenModel({
                     accessToken: accessToken,
@@ -252,15 +250,6 @@ class Service {
                     user: user
                 })
                 const savedTokens = await tokens.save();
-
-                const expireDate = Number(environments.SESSION_HISTORY_EXPIRE)
-                const SessionHistory = new SessionHistoryModel({
-                    token: accessToken,
-                    userId: user._id,
-                    status: "accessed",
-                    tokenExpire: Date.now() + expireDate,
-                });
-                const saveSessionHistory = await SessionHistory.save();
 
                 logger.info(`login successfull ${req.body.email}`)
 
@@ -278,23 +267,23 @@ class Service {
     }
 
 
-    forgotpassword = async (email) => {
+    forgotpasswordService = async (email) => {
 
-        const { JWT_SECRET_KEY, WEB_LINK } = environments
+        const { jwtAccessTokenKey, baseUrl } = environments
         if (email) {
-            const findUser = await findUserByEmail(email);
-            if (findUser) {
-                const secret = findUser?._id + JWT_SECRET_KEY;
+            const User = await UserByEmail(email);
+            if (User) {
+                const secret = User?._id + jwtAccessTokenKey;
 
 
                 const token = GenerateToken({ data: secret });
-                const link = `${WEB_LINK}/auth/resetpassword/${findUser._id}/${token}`
+                const link = `${baseUrl}/api/auth/resetpassword/${User._id}/${token}`
 
                 const replacements = {
                     code: link,
                 };
 
-                const { email, _id } = findUser
+                const { email, _id } = User
                 return (sendMessage(true, "Reset password link sent", { id: _id, email, replacements }));
 
             } else {
@@ -305,9 +294,9 @@ class Service {
 
 
 
-    resetpassword = async (newPassword, conformPassword, token, email) => {
+    resetpasswordService = async (newPassword, conformPassword, token, email) => {
 
-        const { JWT_SECRET_KEY } = environments;
+        const { jwtAccessTokenKey } = environments;
 
         if (!newPassword || !conformPassword || !token || !email) {
             return sendMessage(false, "please fill all the fields", { newPassword, conformPassword, token, email })
@@ -315,14 +304,14 @@ class Service {
         if (newPassword !== conformPassword) {
             return (sendMessage(false, "Please correct conform password", { newPassword, conformPassword, token, email }));
         }
-        const result = await jwt.verify(token, JWT_SECRET_KEY, async (error, decode) => {
+        const result = await jwt.verify(token, jwtAccessTokenKey, async (error, decode) => {
             if (error) {
                 return (sendMessage(false, "Token is not valid", { newPassword, conformPassword, token, email }));
             }
             if (decode) {
                 const { result } = decode
-                const userid = result.slice(0, result.length - JWT_SECRET_KEY.length)
-                const password = bcrypt_hashingData(newPassword);
+                const userid = result.slice(0, result.length - jwtAccessTokenKey.length)
+                const password = bcryptHashingData(newPassword);
                 const updatePassword = await UserModel.findByIdAndUpdate(userid, { $set: { password: password } }, { new: true });
                 if (updatePassword) {
                     return (sendMessage(true, "pasword has been reseted", updatePassword));
@@ -334,23 +323,23 @@ class Service {
         return result
     }
 
-    setpassword = async (req) => {
+    setpasswordService = async (req) => {
 
-        const { JWT_SECRET_KEY } = environments;
+        const { jwtAccessTokenKey } = environments;
         const { token } = req.params
 
-        const result = await jwt.verify(token, JWT_SECRET_KEY, async (error, decode) => {
+        const result = await jwt.verify(token, jwtAccessTokenKey, async (error, decode) => {
             if (error) {
                 return (sendMessage(false, "Token is not valid"));
             }
             if (decode) {
                 const { result } = decode
-                console.log('result: ', result);
-                const userid = result.slice(0, result.length - JWT_SECRET_KEY.length)
-                console.log('userid: ', userid);
+
+                const userid = result.slice(0, result.length - jwtAccessTokenKey.length)
+
 
                 const updatePassword = await UserModel.findOneAndUpdate({ _id: Object(userid) }, { $set: { activeStatus: true } }, { new: true });
-                console.log('updatePassword: ', updatePassword);
+
 
                 const updateTenant = await TenantModel.findByIdAndUpdate(updatePassword?.tenantId, { $set: { activeStatus: true } }, { new: true });
                 if (updatePassword || updateTenant) {
@@ -364,7 +353,7 @@ class Service {
     }
 
 
-    changepassword = async (req, oldPassword, newPassword, conformPassword, email) => {
+    changepasswordService = async (req, oldPassword, newPassword, conformPassword, email) => {
         if (!oldPassword || !newPassword || !conformPassword || !email) {
             return (sendMessage(false, "Please fill all the fields", { oldPassword, newPassword, conformPassword, email }))
         }
@@ -374,12 +363,12 @@ class Service {
         if (newPassword.length < 6) return (sendMessage(false, "Password legth must be 6 characters", { oldPassword, newPassword, conformPassword, email }))
         if (req.user) {
             const { id } = req.user
-            const user = await findUserById(id);
+            const user = await UserById(id);
             if (!user) {
                 return (sendMessage(false, "User not found", { oldPassword, newPassword, conformPassword, email }))
             }
             if (user) {
-                const verifyPassword = bcrypt_compareData(oldPassword, user.password)
+                const verifyPassword = bcryptCompareData(oldPassword, user.password)
                 if (verifyPassword.status) {
                     user.password = newPassword;
                     await user.save();
@@ -392,16 +381,16 @@ class Service {
     }
 
 
-    refresh_token = async (token, email) => {
+    refreshTokenService = async (token, email) => {
 
-        const { JWT_REFRESH_SECRET_KEY, JWT_SECRET_KEY, JWT_SECRET_KEY_EXPIRE } = environments
-        const refreshToken = verify(token, JWT_REFRESH_SECRET_KEY, (err, decode) => {
+        const { jwtRefreshTokenKey, jwtAccessTokenKey, jwtAccessTokenExpireTime } = environments
+        const refreshToken = verify(token, jwtRefreshTokenKey, (err, decode) => {
             if (err) {
                 return sendMessage(false, "login in expire", { email });
             };
             if (decode) {
                 const payload = { id: decode.id, email: decode.email };
-                const accessToken = jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: JWT_SECRET_KEY_EXPIRE });
+                const accessToken = jwt.sign(payload, jwtAccessTokenKey, { expiresIn: jwtAccessTokenExpireTime });
                 return sendMessage(true, "access token refreshed", { token: accessToken, ...payload });
             };
         });

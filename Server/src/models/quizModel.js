@@ -23,20 +23,21 @@ const QuizSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    location_restriction: {
-        type: String,
+    locationRestriction: {
+        type: Boolean,
         require: true
     },
-    tab_switching_restriction: {
-        type: String,
+    tabSwitchingRestriction: {
+        type: Boolean,
         require: true
     },
-    custom_mode: {
-        type: String,
+    customMode: {
+        type: Boolean,
         require: true
     },
-    time_limits: {
+    timeLimits: {
         type: String,
+        enum: ["easy", "medium", "difficult"],
         require: true
     },
 },

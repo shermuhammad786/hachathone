@@ -1,7 +1,7 @@
 import { Logger, transports, createLogger, format } from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
 
-const trans: any[] = [];
+const trans = [];
 
 const formatter = format.combine(
   format.timestamp({ format: "YYYY-MM-DD HH:mm:ss.SSS" }),
@@ -108,7 +108,7 @@ function registerConsoleTransports() {
   }
 }
 
-const initializeLogger = (): Logger => {
+const initializeLogger = () => {
   if (process.env.LOGTARGET === "FILE_ONLY") {
     registerFileTransports();
   } else if (process.env.LOGTARGET === "CONSOLE_ONLY") {

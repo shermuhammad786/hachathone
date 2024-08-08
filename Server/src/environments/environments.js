@@ -4,24 +4,18 @@ dotenv.config()
 
 export const environments = {
   PORT: process.env.PORT || 3030,
+  
+  mongoDBUrl: process.env.MONGODB_URL,
+  baseUrl: process.env.WEB_LINK || "",
+  jwtAccessTokenKey: process.env.JWT_SECRET_KEY || "",
+  jwtRefreshTokenKey: process.env.JWT_REFRESH_SECRET_KEY || "",
 
-  HOST_MYSQL: process.env.HOST_MYSQL,
-  USER_MYSQL: process.env.USER_MYSQL,
-  PASSWORD_MYSQL: process.env.PASSWORD_MYSQL,
-  PORT_MYSQL: process.env.PORT_MYSQL,
-  DATABASE_MYSQL: process.env.DATABASE_MYSQL,
+  jwtAccessTokenExpireTime: process.env.JWT_SECRET_KEY_EXPIRE || "",
+  jwtRefreshTokenExpireTime: process.env.JWT_REFRESH_SECRET_KEY_EXPIRE || "",
 
-  MONGODB_URL: process.env.MONGODB_URL,
-  WEB_LINK: process.env.WEB_LINK || "",
-  JWT_SECRET_KEY: process.env.JWT_SECRET_KEY || "",
-  JWT_REFRESH_SECRET_KEY: process.env.JWT_REFRESH_SECRET_KEY || "",
-
-  JWT_SECRET_KEY_EXPIRE: process.env.JWT_SECRET_KEY_EXPIRE || "",
-  JWT_REFRESH_SECRET_KEY_EXPIRE: process.env.JWT_REFRESH_SECRET_KEY_EXPIRE || "",
-
-  SUPER_ADMIN_ACCESS_TOKEN_KEY: process.env.SUPER_ADMIN_ACCESS_TOKEN_KEY || "",
-  SUPER_ADMIN_ACCESS_TOKEN_EXPIRE: process.env.SUPER_ADMIN_ACCESS_TOKEN_EXPIRE || "",
-  SUPER_ADMIN_REFRESH_TOKEN_KEY: process.env.SUPER_ADMIN_REFRESH_TOKEN_KEY || "",
-  SUPER_ADMIN_REFRESH_TOKEN_EXPIRE: process.env.SUPER_ADMIN_REFRESH_TOKEN_EXPIRE || "",
-  SESSION_HISTORY_EXPIRE: process.env.SESSION_HISTORY_EXPIRE || 30000,
+  adminAccessTokenKey: process.env.SUPER_ADMIN_ACCESS_TOKEN_KEY || "",
+  adminAccessTokenExpireTime: process.env.SUPER_ADMIN_ACCESS_TOKEN_EXPIRE || "",
+  adminRefreshTokenKey: process.env.SUPER_ADMIN_REFRESH_TOKEN_KEY || "",
+  adminRefreshTokenExpireTime: process.env.SUPER_ADMIN_REFRESH_TOKEN_EXPIRE || "",
+  sessionHistoryExpireTime: process.env.SESSION_HISTORY_EXPIRE || 30000,
 }

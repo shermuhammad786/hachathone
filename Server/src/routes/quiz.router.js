@@ -1,11 +1,15 @@
 import e from "express";
-import { createQuiz } from "../controllers/quiz.controller.js";
+import { createQuiz, deleteQuiz, getQuiz, updateQuiz } from "../controllers/quiz.controller.js";
+import { jwtAuth } from "../middlewares/jwt.middleware.js";
+import { authorizeRole } from "../middlewares/identification.js";
 const quizRouter = e.Router();
 
 
 
-quizRouter.post("/", createQuiz);
+quizRouter.post("/", jwtAuth, authorizeRole("superAdmin"), createQuiz);
+quizRouter.put("/:quizId", jwtAuth, authorizeRole("superAdmin"), updateQuiz);
+quizRouter.delete("/:quizId", jwtAuth, authorizeRole("superAdmin"), deleteQuiz);
+quizRouter.get("/", jwtAuth, authorizeRole("superAdmin"), getQuiz);
 
 
-
-export { quizRouter }
+export { quizRouter }   
