@@ -1038,3 +1038,5060 @@ ReferenceError: superAdminDocuments is not defined
 2024-08-08 10:26:06.154 [debug]: 	Logging initialized at debug level 
 2024-08-08 10:27:22.721 [debug]: 	Logging initialized at debug level 
 2024-08-08 10:27:25.704 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:31:00.020 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:31:36.192 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:31:39.230 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:32:23.785 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:32:35.952 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:32:47.828 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:32:51.163 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:33:29.987 [error]: 	uncaughtException: connect ETIMEDOUT 13.201.160.107:27017
+MongoNetworkError: connect ETIMEDOUT 13.201.160.107:27017
+    at connectionFailureError (F:\SMIT-QUIZ\hachathone\Server\node_modules\mongodb\lib\cmap\connect.js:353:20)
+    at TLSSocket.<anonymous> (F:\SMIT-QUIZ\hachathone\Server\node_modules\mongodb\lib\cmap\connect.js:268:44)
+    at Object.onceWrapper (node:events:634:26)
+    at TLSSocket.emit (node:events:519:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  "error": {
+    "connectionGeneration": 0
+  },
+  "stack": "MongoNetworkError: connect ETIMEDOUT 13.201.160.107:27017\n    at connectionFailureError (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongodb\\lib\\cmap\\connect.js:353:20)\n    at TLSSocket.<anonymous> (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongodb\\lib\\cmap\\connect.js:268:44)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:519:28)\n    at emitErrorNT (node:internal/streams/destroy:169:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:128:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:33:29 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13648,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 65052672,
+      "heapTotal": 26243072,
+      "heapUsed": 25277616,
+      "external": 20882862,
+      "arrayBuffers": 18283286
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 1670.921
+  },
+  "trace": [
+    {
+      "column": 20,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongodb\\lib\\cmap\\connect.js",
+      "function": "connectionFailureError",
+      "line": 353,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 44,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongodb\\lib\\cmap\\connect.js",
+      "function": null,
+      "line": 268,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 26,
+      "file": "node:events",
+      "function": "Object.onceWrapper",
+      "line": 634,
+      "method": "onceWrapper",
+      "native": false
+    },
+    {
+      "column": 28,
+      "file": "node:events",
+      "function": "TLSSocket.emit",
+      "line": 519,
+      "method": "emit",
+      "native": false
+    },
+    {
+      "column": 8,
+      "file": "node:internal/streams/destroy",
+      "function": "emitErrorNT",
+      "line": 169,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 3,
+      "file": "node:internal/streams/destroy",
+      "function": "emitErrorCloseNT",
+      "line": 128,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 21,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 82,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:33:31.594 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:34:01.720 [error]: 	uncaughtException: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (F:\SMIT-QUIZ\hachathone\Server\node_modules\mongoose\lib\connection.js:897:11)
+    at NativeConnection.openUri (F:\SMIT-QUIZ\hachathone\Server\node_modules\mongoose\lib\connection.js:848:11)
+    at async mongodbConnection (file:///F:/SMIT-QUIZ/hachathone/Server/src/config/database.mongodb.js:6:19) {
+  "error": {
+    "message": "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/",
+    "reason": {
+      "type": "ReplicaSetNoPrimary",
+      "servers": {
+        "ac-9n4rytn-shard-00-01.beambgn.mongodb.net:27017": {
+          "address": "ac-9n4rytn-shard-00-01.beambgn.mongodb.net:27017",
+          "type": "Unknown",
+          "hosts": [],
+          "passives": [],
+          "arbiters": [],
+          "tags": {},
+          "minWireVersion": 0,
+          "maxWireVersion": 0,
+          "roundTripTime": -1,
+          "minRoundTripTime": 0,
+          "lastUpdateTime": 1693883,
+          "lastWriteDate": 0,
+          "error": {},
+          "topologyVersion": null,
+          "setName": null,
+          "setVersion": null,
+          "electionId": null,
+          "logicalSessionTimeoutMinutes": null,
+          "primary": null,
+          "me": null,
+          "$clusterTime": null
+        },
+        "ac-9n4rytn-shard-00-02.beambgn.mongodb.net:27017": {
+          "address": "ac-9n4rytn-shard-00-02.beambgn.mongodb.net:27017",
+          "type": "Unknown",
+          "hosts": [],
+          "passives": [],
+          "arbiters": [],
+          "tags": {},
+          "minWireVersion": 0,
+          "maxWireVersion": 0,
+          "roundTripTime": -1,
+          "minRoundTripTime": 0,
+          "lastUpdateTime": 1693889,
+          "lastWriteDate": 0,
+          "error": {},
+          "topologyVersion": null,
+          "setName": null,
+          "setVersion": null,
+          "electionId": null,
+          "logicalSessionTimeoutMinutes": null,
+          "primary": null,
+          "me": null,
+          "$clusterTime": null
+        },
+        "ac-9n4rytn-shard-00-00.beambgn.mongodb.net:27017": {
+          "address": "ac-9n4rytn-shard-00-00.beambgn.mongodb.net:27017",
+          "type": "Unknown",
+          "hosts": [],
+          "passives": [],
+          "arbiters": [],
+          "tags": {},
+          "minWireVersion": 0,
+          "maxWireVersion": 0,
+          "roundTripTime": -1,
+          "minRoundTripTime": 0,
+          "lastUpdateTime": 1693906,
+          "lastWriteDate": 0,
+          "error": {},
+          "topologyVersion": null,
+          "setName": null,
+          "setVersion": null,
+          "electionId": null,
+          "logicalSessionTimeoutMinutes": null,
+          "primary": null,
+          "me": null,
+          "$clusterTime": null
+        }
+      },
+      "stale": false,
+      "compatible": true,
+      "heartbeatFrequencyMS": 10000,
+      "localThresholdMS": 15,
+      "setName": "atlas-9ymes3-shard-0",
+      "maxElectionId": null,
+      "maxSetVersion": null,
+      "commonWireVersion": 0,
+      "logicalSessionTimeoutMinutes": null
+    }
+  },
+  "stack": "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongoose\\lib\\connection.js:897:11)\n    at NativeConnection.openUri (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongoose\\lib\\connection.js:848:11)\n    at async mongodbConnection (file:///F:/SMIT-QUIZ/hachathone/Server/src/config/database.mongodb.js:6:19)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:34:01 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14172,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 64520192,
+      "heapTotal": 26243072,
+      "heapUsed": 24482040,
+      "external": 20862287,
+      "arrayBuffers": 18262711
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 1702.656
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongoose\\lib\\connection.js",
+      "function": "_handleConnectionErrors",
+      "line": 897,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 11,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\mongoose\\lib\\connection.js",
+      "function": "NativeConnection.openUri",
+      "line": 848,
+      "method": "openUri",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/config/database.mongodb.js",
+      "function": "async mongodbConnection",
+      "line": 6,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:34:36.559 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:35:03.473 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:35:06.235 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:35:17.070 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:35:18.641 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:03.422 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:09.553 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:15.482 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:27.070 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:36.195 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:41.199 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:49.006 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:37:55.414 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:00.063 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:12.592 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:16.695 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:18.676 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:25.850 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:41.743 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:46.803 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:50.628 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:52.041 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:38:54.304 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:09.175 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:16.132 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:18.715 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:25.180 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:29.287 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:39:32.053 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:40:12.033 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:40:49.479 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:03.813 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:08.848 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:26.577 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:31.295 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:33.495 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:41:40.028 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:24.361 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:28.961 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:40.562 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:41.945 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:46.279 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:42:50.288 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:43:00.818 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:43:04.811 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:43:10.680 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:43:15.234 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:43:39.640 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:47:51.585 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:47:53.775 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:48:00.974 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:48:29.896 [info]: 	token is not valid Error: No auth token 
+2024-08-08 10:51:38.728 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:51:38.734 [error]: 	uncaughtException: roleTableRoutes is not defined
+ReferenceError: roleTableRoutes is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:41:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: roleTableRoutes is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:41:23\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:51:38 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 5336,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 81309696,
+      "heapTotal": 59383808,
+      "heapUsed": 30769496,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 2759.671
+  },
+  "trace": [
+    {
+      "column": 23,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 41,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:52:36.711 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:52:36.740 [error]: 	uncaughtException: roleTableRoutes is not defined
+ReferenceError: roleTableRoutes is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:41:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: roleTableRoutes is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:41:23\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:52:36 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 6844,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 79978496,
+      "heapTotal": 58331136,
+      "heapUsed": 31823960,
+      "external": 20805532,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 2817.687
+  },
+  "trace": [
+    {
+      "column": 23,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 41,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 11:00:53.311 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:08:10.985 [info]: 	token is not valid Error: No auth token 
+2024-08-08 11:08:32.504 [error]: 	uncaughtException: SessionHistoryModel is not defined
+ReferenceError: SessionHistoryModel is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/service/auth.js:64:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: SessionHistoryModel is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/service/auth.js:64:40\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 11:08:32 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13084,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68911104,
+      "heapTotal": 29126656,
+      "heapUsed": 27624808,
+      "external": 20940395,
+      "arrayBuffers": 18340799
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 3773.437
+  },
+  "trace": [
+    {
+      "column": 40,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/service/auth.js",
+      "function": null,
+      "line": 64,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 11:09:05.414 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:09:14.135 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:09:35.233 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:09:39.984 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:09:48.577 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:10:10.209 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:10:20.375 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:10:41.828 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:10:55.324 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:11:26.585 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 11:11:53.411 [info]: 	New role has been created undefined 
+2024-08-08 11:12:09.542 [info]: 	all roles undefined 
+2024-08-08 11:12:13.412 [info]: 	all roles undefined 
+2024-08-08 11:12:23.612 [info]: 	all roles undefined 
+2024-08-08 11:12:39.370 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:13.701 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:32.759 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:36.422 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:39.659 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:50.153 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:13:56.064 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:14:01.106 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:14:46.306 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:14:48.043 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:14:52.975 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:15:01.861 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 11:15:20.655 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:15:29.043 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:15:32.585 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 11:16:09.801 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:22.813 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:35.939 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:38.926 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:45.136 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:47.681 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:16:53.077 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:00.205 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:04.847 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:12.022 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:15.583 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:19.943 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:21.321 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:27.218 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:31.098 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:45.155 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:17:47.578 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:18:26.198 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:19:44.185 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:19:51.294 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:20:52.748 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:20:57.826 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:21:05.603 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:21:12.012 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:21:51.971 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:22:01.432 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:22:21.162 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:22:27.257 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:23:17.009 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:23:26.561 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-08 11:23:49.049 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:23:55.542 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:23:57.829 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:24:06.123 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:26:21.113 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:26:36.407 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:26:46.211 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:26:53.710 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:26:58.451 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:27:00.672 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:27:21.730 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:27:27.379 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:27:53.721 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:28:02.885 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:28:14.643 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:28:29.796 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:28:34.638 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:29:22.563 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:29:46.264 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:29:49.265 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:29:53.994 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:30:12.545 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:30:21.878 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:30:34.206 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:30:38.342 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:30:41.344 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:30:50.937 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:30:59.402 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-08 11:31:22.588 [info]: 	Quiz updated successfully superadmin@gmail.com 
+2024-08-08 11:31:39.877 [info]: 	Quiz deleted successfully superadmin@gmail.com 
+2024-08-08 11:32:11.181 [info]: 	Role has been updated undefined 
+2024-08-08 11:32:27.239 [info]: 	Role has been deleted undefined 
+2024-08-08 11:41:11.724 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:41:16.198 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:41:29.119 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:00.172 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:01.459 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:26.398 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:28.993 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:30.765 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:34.097 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:39.635 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:45.849 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:42:50.497 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:30.587 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:34.787 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:45.267 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:51.444 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:53.179 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:54.882 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:43:58.803 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:00.592 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:07.210 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:14.926 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:17.341 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:32.692 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:37.801 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:54.834 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:56.042 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:44:58.245 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:05.844 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:07.087 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:29.866 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:31.208 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:37.033 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:38.075 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:48.529 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:57.787 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:59.401 [debug]: 	Logging initialized at debug level 
+2024-08-08 11:45:59.408 [error]: 	uncaughtException: questionRouter is not defined
+ReferenceError: questionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:44:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: questionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:44:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 11:45:59 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13968,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82087936,
+      "heapTotal": 58855424,
+      "heapUsed": 30488536,
+      "external": 20805456,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 6020.343
+  },
+  "trace": [
+    {
+      "column": 22,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 44,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:06:03.099 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:06:16.008 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:06:21.730 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:06:26.211 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:06:30.642 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:02.695 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:04.408 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:14.926 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:20.103 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:26.549 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:35.378 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:07:48.243 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:08:00.902 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:08:08.064 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:09:11.067 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:09:13.091 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:09:26.191 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:11:55.260 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:11.920 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:15.501 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:25.876 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:32.628 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:41.762 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:12:57.025 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:13:17.864 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:13:20.771 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:13:35.033 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:14:13.456 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:14:29.282 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:14:35.255 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:14:46.531 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:00.433 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:05.584 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:07.460 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:13.966 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:25.639 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:37.003 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:15:54.603 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:00.422 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:09.039 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:19.733 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:21.935 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:29.607 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:34.014 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:35.965 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:16:42.862 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:17:05.941 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:21:52.170 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:04.895 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:08.522 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:11.819 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:16.312 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:42.854 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:46.049 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:50.509 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:22:53.503 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:24:01.873 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:24:03.112 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:26:15.849 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:26:56.342 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:27:05.021 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:27:06.683 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:27:09.833 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:27:14.529 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:27:19.588 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:32:38.869 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:32:50.009 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:32:52.379 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:32:59.937 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:33:03.809 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:33:36.851 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:33:45.815 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:33:52.145 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:33:56.709 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:34:00.752 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:34:04.735 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:34:14.671 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:34:30.281 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:34:35.623 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:36:31.092 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:37:10.426 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:22.464 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:28.181 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:32.984 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:37.448 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:42.246 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:47.439 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:38:56.543 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:02.664 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:18.112 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:26.692 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:31.419 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:35.003 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:39:58.673 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:40:10.224 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:40:16.465 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:40:26.954 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:40:36.709 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:19.898 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:23.622 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:28.251 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:53.715 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:57.718 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:41:59.127 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:01.590 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:03.553 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:15.825 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:24.600 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:33.302 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:34.576 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:42:57.869 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:43:34.250 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:43:39.391 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:43:44.481 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:43:46.473 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:15.104 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:18.722 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:23.613 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:27.296 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:33.826 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:37.953 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:40.196 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:42.902 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:49.485 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:55.052 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:44:56.359 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:45:06.942 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:45:12.841 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:45:17.786 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:45:57.042 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:46:19.699 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:49:48.809 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:49:53.265 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:50:01.646 [info]: 	token is not valid Error: No auth token 
+2024-08-08 12:50:29.324 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:50:32.296 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:50:38.396 [info]: 	token is not valid Error: No auth token 
+2024-08-08 12:50:51.610 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:51:40.442 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 12:52:53.642 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:52:53 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2012,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 69820416,
+      "heapTotal": 29650944,
+      "heapUsed": 27064056,
+      "external": 20994436,
+      "arrayBuffers": 18394840
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10034.578
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:53:16.195 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:53:19.314 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:53:50.697 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:53:50 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 5256,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68628480,
+      "heapTotal": 28864512,
+      "heapUsed": 26896360,
+      "external": 20923328,
+      "arrayBuffers": 18323732
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10091.64
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:54:00.826 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:54:06.297 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:54:09.086 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:54:11.034 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:54:14.470 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:54:14 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 10876,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84746240,
+      "heapTotal": 62156800,
+      "heapUsed": 28964656,
+      "external": 20949755,
+      "arrayBuffers": 18349044
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10115.406
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:54:20.348 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:56:27.225 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:56:31.948 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:56:34.672 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:56:38.478 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:56:38 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14044,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84611072,
+      "heapTotal": 62418944,
+      "heapUsed": 28952008,
+      "external": 20949755,
+      "arrayBuffers": 18349044
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10259.421
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:58:19.719 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:58:23.645 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:58:23 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 1988,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84779008,
+      "heapTotal": 61632512,
+      "heapUsed": 28886192,
+      "external": 20949740,
+      "arrayBuffers": 18349029
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10364.593
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:58:48.519 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:58:54.845 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:58:57.697 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:58:57 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 1304,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84725760,
+      "heapTotal": 61894656,
+      "heapUsed": 28863032,
+      "external": 20949740,
+      "arrayBuffers": 18349029
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10398.64
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 12:59:34.427 [debug]: 	Logging initialized at debug level 
+2024-08-08 12:59:48.532 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 12:59:48 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2912,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68210688,
+      "heapTotal": 28864512,
+      "heapUsed": 26384280,
+      "external": 20905256,
+      "arrayBuffers": 18304545
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10449.468
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:00:07.009 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:00:16.817 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:00:21.529 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:00:21 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 3220,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 86134784,
+      "heapTotal": 62418944,
+      "heapUsed": 29076976,
+      "external": 20958369,
+      "arrayBuffers": 18357658
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10482.468
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:00:55.267 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:01:08.117 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:01:08 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13380,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68362240,
+      "heapTotal": 28602368,
+      "heapUsed": 26403920,
+      "external": 20912045,
+      "arrayBuffers": 18312449
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10529.062
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:01:29.563 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:01:34.845 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:01:53.016 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:02:11.062 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:02:11 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 116,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68661248,
+      "heapTotal": 28340224,
+      "heapUsed": 26119432,
+      "external": 20904659,
+      "arrayBuffers": 18305063
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10592
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:02:22.494 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:02:30.171 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:02:37.019 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:03:08.019 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:03:14.148 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:03:14 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 12164,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85209088,
+      "heapTotal": 62418944,
+      "heapUsed": 29201336,
+      "external": 20958369,
+      "arrayBuffers": 18357658
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10655.093
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:03:34.768 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:03:52.314 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:04:03.911 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:04:03 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 1340,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68435968,
+      "heapTotal": 28864512,
+      "heapUsed": 26474480,
+      "external": 20904096,
+      "arrayBuffers": 18304500
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10704.843
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:04:17.435 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:04:20.529 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:05:32.750 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:05:41.379 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:05:57.852 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:00.020 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:02.205 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:09.313 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:11.318 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:41.692 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:06:45.324 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:06:45 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13504,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 86212608,
+      "heapTotal": 62681088,
+      "heapUsed": 29238704,
+      "external": 20958369,
+      "arrayBuffers": 18357658
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10866.265
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:07:48.569 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:07:51.758 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:07:58.521 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:08:02.281 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:08:10.854 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:08:10 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 12596,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68169728,
+      "heapTotal": 28340224,
+      "heapUsed": 26396792,
+      "external": 20904252,
+      "arrayBuffers": 18304656
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 10951.796
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:08:25.187 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:08:26.922 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:09:03.310 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:09:04.771 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:09:42.026 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:09:42 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 6968,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68247552,
+      "heapTotal": 28340224,
+      "heapUsed": 26720208,
+      "external": 20928828,
+      "arrayBuffers": 18329232
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11042.968
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:09:48.664 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:09:57.513 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:09:57 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 7552,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85213184,
+      "heapTotal": 62156800,
+      "heapUsed": 29080960,
+      "external": 20958351,
+      "arrayBuffers": 18357640
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11058.453
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:10:16.736 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:10:35.120 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:10:35 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 4840,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68186112,
+      "heapTotal": 28340224,
+      "heapUsed": 26404128,
+      "external": 20912045,
+      "arrayBuffers": 18312449
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11096.062
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:11:04.416 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:11:22.117 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:19:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:11:22 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 8296,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 68571136,
+      "heapTotal": 29126656,
+      "heapUsed": 26488680,
+      "external": 20911854,
+      "arrayBuffers": 18312258
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11143.062
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 19,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:11:49.680 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:11:53.240 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:11:56.465 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:12:07.196 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:12:12.486 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:12:12 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 9164,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85114880,
+      "heapTotal": 62418944,
+      "heapUsed": 29130528,
+      "external": 20958418,
+      "arrayBuffers": 18357707
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11193.421
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 20,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:12:41.858 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:13:00.242 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:13:00 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 9592,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 67936256,
+      "heapTotal": 28078080,
+      "heapUsed": 26409016,
+      "external": 20911854,
+      "arrayBuffers": 18312258
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11241.187
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 20,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:13:53.073 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:14:24.354 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:14:27.811 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:14:27 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 8228,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84713472,
+      "heapTotal": 62156800,
+      "heapUsed": 29222936,
+      "external": 20958438,
+      "arrayBuffers": 18357727
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11328.75
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 20,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:15:21.200 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:15:25.786 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:21:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:21:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:15:25 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14108,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84836352,
+      "heapTotal": 62681088,
+      "heapUsed": 29315456,
+      "external": 20958438,
+      "arrayBuffers": 18357727
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11386.734
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:16:19.632 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:16:28.973 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:16:33.255 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:16:33 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 396,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85061632,
+      "heapTotal": 61894656,
+      "heapUsed": 29007808,
+      "external": 20958438,
+      "arrayBuffers": 18357727
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11454.203
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 20,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:16:48.401 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:16:51.430 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:16:55.347 [error]: 	uncaughtException: logger is not defined
+ReferenceError: logger is not defined
+    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: logger is not defined\n    at createQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:20:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:16:55 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2912,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85217280,
+      "heapTotal": 62418944,
+      "heapUsed": 28994528,
+      "external": 20958438,
+      "arrayBuffers": 18357727
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11476.296
+  },
+  "trace": [
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 20,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:17:07.670 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:17:11.294 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-08 13:17:53.649 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:17:59.272 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-08 13:18:29.089 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:18:29.094 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 13:18:29.102 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:18:29 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 1800,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 69836800,
+      "heapTotal": 29913088,
+      "heapUsed": 26756344,
+      "external": 20931750,
+      "arrayBuffers": 18332154
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 11570.046
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 42,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:18:45.652 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:19:55.152 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:20:02.760 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:20:11.625 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:20:16.141 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:20:21.450 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:20:33.373 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:21:47.618 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:22:30.439 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:22:34.557 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:22:37.749 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:22:41.894 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:22:46.094 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:23:00.081 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:23:04.574 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:23:48.255 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:23:58.427 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:26.013 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:31.469 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:34.471 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:37.152 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:40.959 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:43.454 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:24:45.060 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:25:28.659 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:25:43.517 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:25:54.955 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:26:16.497 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:26:38.869 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:27:12.103 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:27:20.452 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:27:23.932 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:27:38.698 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 13:27:38.709 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:27:38 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 9120,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 67485696,
+      "heapTotal": 27553792,
+      "heapUsed": 26131680,
+      "external": 20912594,
+      "arrayBuffers": 18312998
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 12119.64
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 42,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:28:11.403 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:13.073 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:16.589 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:29.542 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:32.193 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:34.605 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 13:28:34.623 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:28:34 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2080,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84385792,
+      "heapTotal": 61894656,
+      "heapUsed": 28200160,
+      "external": 20949153,
+      "arrayBuffers": 18348442
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 12175.562
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 42,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:28:49.702 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:28:53.056 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 13:28:53.071 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 13:28:53 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 4612,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84496384,
+      "heapTotal": 61894656,
+      "heapUsed": 27895312,
+      "external": 20948780,
+      "arrayBuffers": 18348069
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 12194.015
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 42,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 13:29:05.330 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:29:14.895 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:29:59.420 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:30:01.324 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:30:04.040 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:30:11.324 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:30:47.339 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:30:49.704 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:30:58.019 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:31:00.340 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:31:14.610 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:31:17.143 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:31:43.322 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:31:58.396 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:32:38.628 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:32:44.971 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:32:50.125 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:32:55.911 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:33:31.786 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 13:33:44.593 [debug]: 	Logging initialized at debug level 
+2024-08-08 13:33:48.308 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:06:37.041 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:08:36.765 [info]: 	token is not valid TokenExpiredError: jwt expired 
+2024-08-08 14:08:45.276 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 14:09:05.333 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:09:51.137 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:10:00.668 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:10:04.200 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:10:40.893 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:10:43.292 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:10:58.686 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:06.293 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:15.034 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:24.338 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:27.355 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:32.135 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:34.378 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:43.874 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:11:52.892 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:12:03.102 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:12:05.381 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:12:18.423 [error]: 	token is expired undefined 
+2024-08-08 14:12:51.542 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:13:04.935 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:13:29.665 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-08 14:13:37.133 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:13:45.898 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:13:57.501 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:14:29.352 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:14:38.620 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:14:40.858 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:14:43.599 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:14:51.920 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:15:00.432 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:15:08.937 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:15:28.130 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:15:33.733 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:16:06.630 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:16:09.663 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:16:19.206 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:16:24.534 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:16:35.161 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 14:17:17.056 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:17:24.117 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:17:34.260 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 14:17:51.072 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:18:09.135 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:18:19.542 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:18:23.561 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:18:35.225 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:18:48.586 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:03.545 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:15.850 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:19.036 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:24.205 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:31.294 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:38.516 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:43.078 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:56.581 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:19:59.614 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:01.468 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:07.077 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:09.499 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:13.250 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:23.576 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:33.342 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:35.900 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:43.902 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:20:58.564 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:03.194 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:06.337 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:12.470 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:14.522 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:17.657 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:25.535 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:40.723 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:43.384 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:21:51.850 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:22:45.071 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:03.312 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:11.741 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:17.301 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:35.790 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:40.142 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:23:45.288 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:01.782 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:08.845 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:35.044 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:37.103 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:43.998 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:24:47.800 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:06.516 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:13.762 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:21.013 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:31.539 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:42.212 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:46.779 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:53.377 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:25:58.957 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:26:35.480 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:26:38.798 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:26:45.117 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:27:09.149 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 14:33:40.942 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:33:42.868 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:33:53.580 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:00.910 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:03.125 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:05.522 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:11.514 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:13.769 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:34:16.849 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:35:00.136 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-08 14:35:11.458 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-08 14:35:19.947 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:35:19.964 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:35:19 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 3788,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 67190784,
+      "heapTotal": 29650944,
+      "heapUsed": 27324240,
+      "external": 20945031,
+      "arrayBuffers": 18344320
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16180.906
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 62,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:35:49.832 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:35:51.594 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:36:11.104 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:36:11.122 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:36:11 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14680,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82214912,
+      "heapTotal": 62418944,
+      "heapUsed": 28825464,
+      "external": 20989850,
+      "arrayBuffers": 18389139
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16232.062
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:36:30.693 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:36:34.519 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:36:34.541 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:36:34 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14048,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82640896,
+      "heapTotal": 62418944,
+      "heapUsed": 28014112,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16255.484
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:37:24.602 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:37:29.126 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:37:33.375 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:37:33.395 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:37:33 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 4632,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82604032,
+      "heapTotal": 61894656,
+      "heapUsed": 27991240,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16314.328
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:38:32.106 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:38:35.984 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:39:15.236 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:39:17.772 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:39:21.322 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:39:21.329 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:39:21 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14968,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82345984,
+      "heapTotal": 61632512,
+      "heapUsed": 27992288,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16422.265
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:40:00.404 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:40:07.891 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:40:20.541 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:40:20.563 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:40:20 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 16172,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 83238912,
+      "heapTotal": 62418944,
+      "heapUsed": 28706488,
+      "external": 20981658,
+      "arrayBuffers": 18380947
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16481.5
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:41:01.729 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:41:07.170 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:41:11.855 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:41:11.867 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:41:11 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 3188,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82083840,
+      "heapTotal": 62156800,
+      "heapUsed": 28144392,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16532.812
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:41:23.906 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:41:28.627 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:41:32.272 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:41:32.290 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:41:32 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 200,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82333696,
+      "heapTotal": 62156800,
+      "heapUsed": 28006728,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16553.218
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:43:21.671 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:43:23.077 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:43:59.128 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:44:08.027 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:44:08.031 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:44:08 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 952,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 63836160,
+      "heapTotal": 27553792,
+      "heapUsed": 25526208,
+      "external": 20895623,
+      "arrayBuffers": 18296027
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16708.968
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:45:21.510 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:45:24.697 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:45:28.039 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:45:28.050 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:45:28 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15040,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82763776,
+      "heapTotal": 61894656,
+      "heapUsed": 28220992,
+      "external": 20957913,
+      "arrayBuffers": 18357202
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16788.984
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:45:35.631 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:45:38.080 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:45:38.105 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:45:38 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2324,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 83542016,
+      "heapTotal": 61894656,
+      "heapUsed": 28159696,
+      "external": 20965174,
+      "arrayBuffers": 18364463
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16799.031
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:45:48.937 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:45:51.215 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:45:51.222 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:45:51 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15972,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82870272,
+      "heapTotal": 61632512,
+      "heapUsed": 27953400,
+      "external": 20948780,
+      "arrayBuffers": 18348069
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16812.156
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:46:25.469 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:46:28.589 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:46:28.598 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:61:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:46:28 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 9088,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 83279872,
+      "heapTotal": 61894656,
+      "heapUsed": 28001832,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16849.531
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 61,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:47:10.336 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:47:14.451 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:47:14.462 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:47:14 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 8724,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82993152,
+      "heapTotal": 61894656,
+      "heapUsed": 28125200,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16895.406
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 62,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:47:28.558 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:47:30.899 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:47:40.272 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:47:40.291 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:63:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:63:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:47:40 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15400,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 83038208,
+      "heapTotal": 61894656,
+      "heapUsed": 28290520,
+      "external": 20964594,
+      "arrayBuffers": 18363883
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16921.218
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 63,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:47:49.751 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:48:08.455 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:48:10.452 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:48:13.662 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:48:22.649 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:48:22.671 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuizQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:62:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:48:22 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14440,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 65204224,
+      "heapTotal": 27291648,
+      "heapUsed": 25919040,
+      "external": 20896186,
+      "arrayBuffers": 18296590
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 16963.609
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuizQuestion",
+      "line": 62,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:49:02.825 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:49:04.654 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:49:20.314 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:49:39.900 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:49:45.390 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:49:50.570 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:50:21.662 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:50:21.678 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:41:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:41:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:50:21 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 6288,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 65818624,
+      "heapTotal": 27553792,
+      "heapUsed": 26395832,
+      "external": 20929682,
+      "arrayBuffers": 18330086
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 17082.625
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 41,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:51:06.272 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:51:10.612 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:51:23.809 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:51:34.219 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:51:34.236 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:41:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:41:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:51:34 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14748,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 65675264,
+      "heapTotal": 27553792,
+      "heapUsed": 25916296,
+      "external": 20896210,
+      "arrayBuffers": 18296614
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 17155.171
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 41,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:52:10.373 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:52:22.998 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:52:30.950 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:52:40.491 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:52:42.940 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:53:50.502 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:53:53.616 [error]: 	Internal server error {
+  "body": {}
+}
+2024-08-08 14:53:53.624 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:43:24)
+    at Layer.handle [as handle_request] (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\router\route.js:149:13)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/middlewares/identification.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:43:24)\n    at Layer.handle [as handle_request] (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/middlewares/identification.js:13:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:53:53 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 13748,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82104320,
+      "heapTotal": 61632512,
+      "heapUsed": 29047992,
+      "external": 20951126,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 17294.562
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 43,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\router\\layer.js",
+      "function": "Layer.handle [as handle_request]",
+      "line": 95,
+      "method": "handle [as handle_request]",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\router\\route.js",
+      "function": "next",
+      "line": 149,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 9,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/middlewares/identification.js",
+      "function": null,
+      "line": 13,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:54:46.489 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:54:50.890 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:54:58.840 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:01.856 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:03.782 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:10.062 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:19.313 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:23.985 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:39.411 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:43.464 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:55:46.318 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 14:55:46.322 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at getQuestion (file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js:42:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 14:55:46 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 4824,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 82870272,
+      "heapTotal": 61894656,
+      "heapUsed": 28020992,
+      "external": 20949721,
+      "arrayBuffers": 18349010
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 17407.265
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/controllers/question.controller.js",
+      "function": "getQuestion",
+      "line": 42,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-08 14:56:17.769 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:56:23.339 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:56:27.835 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:56:30.815 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:02.964 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:06.437 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 14:57:17.673 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:19.833 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:25.609 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:28.168 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 14:57:49.449 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:52.936 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:57:57.362 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:58:17.103 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:58:23.903 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 14:59:20.096 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:59:26.909 [debug]: 	Logging initialized at debug level 
+2024-08-08 14:59:46.676 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 14:59:57.344 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:00:00.569 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:00:01.984 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:00:08.277 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:00:23.800 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:01:12.580 [info]: 	login successfull superadmin@gmail.com 
+2024-08-08 15:01:39.414 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:02:21.942 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:02:42.699 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:03:02.372 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:03:05.096 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:03:06.887 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:03:08.018 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:03:50.436 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:03:53.589 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:04:05.357 [error]: 	token is expired undefined 
+2024-08-08 15:04:14.514 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:04:31.056 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:04:33.915 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:04:36.789 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:04:45.278 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:04:49.949 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:04:53.371 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:05:39.311 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:05:41.334 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:05:59.733 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:06:02.128 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:06:18.207 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:06:33.363 [error]: 	token is expired undefined 
+2024-08-08 15:06:45.884 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:07:46.345 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:07:52.528 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:07:55.874 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:08:17.408 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:08:47.506 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:08:53.073 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:03.021 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:06.284 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:11.226 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:13.016 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:19.412 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:09:42.653 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:44.386 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:09:49.693 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:09:57.688 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:10:44.224 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:10:48.291 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:10:58.457 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:11:11.664 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:11:25.846 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:11:29.731 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:11:42.450 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:00.804 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:05.107 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:09.085 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:16.821 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:19.802 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:23.808 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:26.768 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:12:30.262 [error]: 	Internal server error get {
+  "body": {}
+}
+2024-08-08 15:12:52.506 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:00.098 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:03.395 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:07.121 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:13:14.659 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:17.929 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:21.203 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:23.283 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:29.812 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:39.312 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:13:43.340 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:13:55.683 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:14:09.902 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-08 15:14:36.590 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:14:52.818 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:15:08.823 [error]: 	Please put the difficulity (Easy, Medium, Hard) superadmin@gmail.com 
+2024-08-08 15:15:48.623 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:15:57.115 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:16:01.261 [error]: 	Please put the difficulity (Easy, Medium, Hard) superadmin@gmail.com 
+2024-08-08 15:16:41.999 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:17:34.813 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:17:56.809 [error]: 	Please put the type (Multiple , Single) superadmin@gmail.com 
+2024-08-08 15:18:10.768 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:18:13.247 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:18:16.580 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-08 15:18:54.094 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:19:06.317 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:19:28.100 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:19:47.277 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-08 15:20:24.083 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:20:26.605 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:20:28.790 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:21:08.098 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:21:10.787 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:21:20.723 [error]: 	Internal server error quizId {
+  "body": {
+    "errorResponse": {
+      "ok": 0,
+      "errmsg": "An object representing an expression must have exactly one field: { $regex: \"\", $options: \"i\" }",
+      "code": 15983,
+      "codeName": "Location15983",
+      "$clusterTime": {
+        "clusterTime": {
+          "$timestamp": "7400711753224421379"
+        },
+        "signature": {
+          "hash": "7yZgt2ilmDCU5dNKaFFxA7Pl+6M=",
+          "keyId": {
+            "low": 21,
+            "high": 1712333187,
+            "unsigned": false
+          }
+        }
+      },
+      "operationTime": {
+        "$timestamp": "7400711753224421379"
+      }
+    },
+    "ok": 0,
+    "code": 15983,
+    "codeName": "Location15983",
+    "$clusterTime": {
+      "clusterTime": {
+        "$timestamp": "7400711753224421379"
+      },
+      "signature": {
+        "hash": "7yZgt2ilmDCU5dNKaFFxA7Pl+6M=",
+        "keyId": {
+          "low": 21,
+          "high": 1712333187,
+          "unsigned": false
+        }
+      }
+    },
+    "operationTime": {
+      "$timestamp": "7400711753224421379"
+    }
+  }
+}
+2024-08-08 15:21:37.777 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:21:46.072 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:21:49.495 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-08 15:22:52.213 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:22:55.681 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-08 15:25:06.032 [info]: 	Question updated successfully superadmin@gmail.com 
+2024-08-08 15:25:22.397 [info]: 	Question deleted successfully superadmin@gmail.com 
+2024-08-08 15:25:41.865 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:25:47.162 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:25:50.218 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:26:20.615 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:26:54.310 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:26:55.926 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:27:01.480 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:27:30.814 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:27:33.010 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:28:19.962 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:28:58.042 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:28:59.372 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:01.934 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:04.871 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:17.591 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:17.598 [error]: 	uncaughtException: studenQuestionRouter is not defined
+ReferenceError: studenQuestionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studenQuestionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:29:17 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 4040,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 79806464,
+      "heapTotal": 59379712,
+      "heapUsed": 31595368,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 19418.546
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 47,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:29:34.586 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:34.591 [error]: 	uncaughtException: studenQuestionRouter is not defined
+ReferenceError: studenQuestionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studenQuestionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:29:34 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14632,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 79122432,
+      "heapTotal": 59645952,
+      "heapUsed": 31233800,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 19435.531
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 47,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:29:41.281 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:41.288 [error]: 	uncaughtException: studenQuestionRouter is not defined
+ReferenceError: studenQuestionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studenQuestionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:29:41 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 12260,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 77803520,
+      "heapTotal": 58593280,
+      "heapUsed": 32599224,
+      "external": 20805532,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 19442.234
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 47,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:29:52.213 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:29:52.220 [error]: 	uncaughtException: studenQuestionRouter is not defined
+ReferenceError: studenQuestionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studenQuestionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:29:52 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14060,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 79097856,
+      "heapTotal": 59645952,
+      "heapUsed": 31629448,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 19453.156
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 47,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:30:00.766 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:30:00.772 [error]: 	uncaughtException: studenQuestionRouter is not defined
+ReferenceError: studenQuestionRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studenQuestionRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:47:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:30:00 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14932,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78508032,
+      "heapTotal": 59379712,
+      "heapUsed": 30736696,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 19461.718
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 47,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:30:07.943 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:31:21.089 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:24.334 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:24.341 [error]: 	uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:217:11)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "TypeError: app.use() requires a middleware function\n    at Function.use (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:217:11)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:24 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2492,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 76750848,
+      "heapTotal": 58855424,
+      "heapUsed": 30509752,
+      "external": 20805456,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20925.281
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.use",
+      "line": 217,
+      "method": "use",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:28.871 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:28.883 [error]: 	uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:217:11)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "TypeError: app.use() requires a middleware function\n    at Function.use (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:217:11)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:28 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15436,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78622720,
+      "heapTotal": 59641856,
+      "heapUsed": 31748824,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20929.828
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.use",
+      "line": 217,
+      "method": "use",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:30.875 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:30.881 [error]: 	uncaughtException: app.use() requires a middleware function
+TypeError: app.use() requires a middleware function
+    at Function.use (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:217:11)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "TypeError: app.use() requires a middleware function\n    at Function.use (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:217:11)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:30 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 11372,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78794752,
+      "heapTotal": 58331136,
+      "heapUsed": 34034312,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20931.828
+  },
+  "trace": [
+    {
+      "column": 11,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.use",
+      "line": 217,
+      "method": "use",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:38.633 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:38.640 [error]: 	uncaughtException: studentDetails is not defined
+ReferenceError: studentDetails is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:24
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studentDetails is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:24\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:38 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15324,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78757888,
+      "heapTotal": 59641856,
+      "heapUsed": 31732496,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20939.578
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:45.241 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:45.248 [error]: 	uncaughtException: studentRoutes is not defined
+ReferenceError: studentRoutes is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studentRoutes is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:45 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 15856,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78704640,
+      "heapTotal": 59645952,
+      "heapUsed": 31246776,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20946.187
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:54.216 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:54.223 [error]: 	uncaughtException: studentRoutes is not defined
+ReferenceError: studentRoutes is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studentRoutes is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:54 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 6060,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 77819904,
+      "heapTotal": 58855424,
+      "heapUsed": 32356712,
+      "external": 20805532,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20955.171
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:54:57.727 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:54:57.734 [error]: 	uncaughtException: studentRoutes is not defined
+ReferenceError: studentRoutes is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studentRoutes is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:54:57 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 14512,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78635008,
+      "heapTotal": 59641856,
+      "heapUsed": 31768016,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20958.671
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 15:55:31.681 [debug]: 	Logging initialized at debug level 
+2024-08-08 15:55:31.686 [error]: 	uncaughtException: studentRouter is not defined
+ReferenceError: studentRouter is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: studentRouter is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:49:25\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 15:55:31 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 8080,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78585856,
+      "heapTotal": 59641856,
+      "heapUsed": 31572576,
+      "external": 20805619,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 20992.625
+  },
+  "trace": [
+    {
+      "column": 25,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 49,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 16:00:53.027 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:06.122 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:15.708 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:22.485 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:29.165 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:45.231 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:49.051 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:57.567 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:08:59.348 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:09:07.949 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:11:48.598 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:11:57.398 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:12:06.843 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:12:31.625 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:12:41.099 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:12:57.634 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:13:03.816 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:13:57.168 [debug]: 	Logging initialized at debug level 
+2024-08-08 16:14:01.023 [debug]: 	Logging initialized at debug level 

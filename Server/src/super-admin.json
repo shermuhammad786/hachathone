@@ -5,7 +5,7 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "localhost:8181",
   "basePath": "/",
   "schemes": [
     "http",
@@ -26,31 +26,15 @@
       "description": "Admin related APIs"
     },
     {
-      "name": "Tenant",
+      "name": "Student",
       "description": "Admin related APIs"
     },
     {
-      "name": "Tenant Users",
+      "name": "Quiz",
       "description": "Admin related APIs"
     },
     {
-      "name": "Tenant Assets",
-      "description": "Admin related APIs"
-    },
-    {
-      "name": "Asset Assignment",
-      "description": "Admin related APIs"
-    },
-    {
-      "name": "Assets Attributes",
-      "description": "Admin related APIs"
-    },
-    {
-      "name": "Status Type",
-      "description": "Admin related APIs"
-    },
-    {
-      "name": "Status Table",
+      "name": "Questions",
       "description": "Admin related APIs"
     },
     {
@@ -59,7 +43,7 @@
     }
   ],
   "paths": {
-    "/api/auth/admin/login": {
+    "/api/auth/login": {
       "post": {
         "tags": [
           "Auth"
@@ -89,7 +73,7 @@
         }
       }
     },
-    "/api/auth/admin/change/password": {
+    "/api/auth/change/password": {
       "put": {
         "tags": [
           "Auth"
@@ -139,7 +123,7 @@
         }
       }
     },
-    "/api/auth/admin/refresh/{token}": {
+    "/api/auth/refresh/{token}": {
       "post": {
         "tags": [
           "Auth"
@@ -159,168 +143,6 @@
           },
           "403": {
             "description": "Forbidden"
-          }
-        }
-      }
-    },
-    "/api/admin/assign/asset/logs": {
-      "get": {
-        "tags": [
-          "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/assign/asset/{assetId}": {
-      "get": {
-        "tags": [
-          "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "assetId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/assign/asset/{assetId}/{userId}": {
-      "post": {
-        "tags": [
-          "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "assetId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "assetId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
@@ -478,10 +300,10 @@
         }
       }
     },
-    "/api/admin/tenant": {
+    "/api/quiz": {
       "post": {
         "tags": [
-          "Tenant"
+          "Quiz"
         ],
         "description": "",
         "parameters": [
@@ -491,23 +313,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "email": {
-                  "example": "string"
+                "title": {
+                  "example": "HTML Basics"
                 },
-                "userName": {
-                  "example": "string"
+                "description": {
+                  "example": "A quiz on basic math concepts."
                 },
-                "roleId": {
-                  "example": "string"
+                "course": {
+                  "example": "web and app"
                 },
-                "tenantName": {
-                  "example": "string"
+                "duration": {
+                  "example": "60"
                 },
-                "tenantLogo": {
-                  "example": "string"
+                "deadline": {
+                  "example": "2024-12-31T23:59"
                 },
-                "activeStatus": {
-                  "example": "boolean"
+                "locationRestriction": {
+                  "example": "false"
+                },
+                "tabSwitchingRestriction": {
+                  "example": "false"
+                },
+                "customMode": {
+                  "example": "false"
+                },
+                "timeLimits": {
+                  "example": "medium"
                 }
               }
             }
@@ -530,10 +361,25 @@
       },
       "get": {
         "tags": [
-          "Tenant"
+          "Quiz"
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "locationRestriction",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "tabSwitchingRestriction",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "customMode",
+            "in": "query",
+            "type": "string"
+          },
           {
             "name": "limit",
             "in": "query",
@@ -576,10 +422,10 @@
         }
       }
     },
-    "/api/admin/tenant/{id}": {
+    "/api/quiz/{id}": {
       "put": {
         "tags": [
-          "Tenant"
+          "Quiz"
         ],
         "description": "",
         "parameters": [
@@ -595,17 +441,32 @@
             "schema": {
               "type": "object",
               "properties": {
-                "email": {
-                  "example": "string"
+                "title": {
+                  "example": "HTML Basics"
                 },
-                "tenantName": {
-                  "example": "string"
+                "description": {
+                  "example": "A quiz on basic math concepts."
                 },
-                "tenantLogo": {
-                  "example": "string"
+                "course": {
+                  "example": "web and app"
                 },
-                "activeStatus": {
-                  "example": "boolean"
+                "duration": {
+                  "example": "60"
+                },
+                "deadline": {
+                  "example": "2024-12-31T23:59"
+                },
+                "locationRestriction": {
+                  "example": "false"
+                },
+                "tabSwitchingRestriction": {
+                  "example": "false"
+                },
+                "customMode": {
+                  "example": "false"
+                },
+                "timeLimits": {
+                  "example": "medium"
                 }
               }
             }
@@ -628,7 +489,7 @@
       },
       "delete": {
         "tags": [
-          "Tenant"
+          "Quiz"
         ],
         "description": "",
         "parameters": [
@@ -655,10 +516,10 @@
         }
       }
     },
-    "/api/admin/user": {
+    "/api/question": {
       "post": {
         "tags": [
-          "Tenant Users"
+          "Questions"
         ],
         "description": "",
         "parameters": [
@@ -668,31 +529,44 @@
             "schema": {
               "type": "object",
               "properties": {
-                "tenantId": {
-                  "example": "string"
+                "quizId": {
+                  "example": "123awsd"
                 },
-                "email": {
-                  "example": "string"
+                "category": {
+                  "example": "Entertainment A Video Games"
                 },
-                "roleId": {
-                  "example": "string"
+                "type": {
+                  "example": "multiple"
                 },
-                "userName": {
-                  "example": "string"
+                "difficulty": {
+                  "example": "hard ,medium , easy"
                 },
-                "activeStatus": {
-                  "example": "boolean"
+                "question": {
+                  "example": "JS stands for"
                 },
-                "timezone": {
-                  "example": "string"
+                "correct_answer": {
+                  "example": "JavaScript"
+                },
+                "incorrect_answers": {
+                  "example": [
+                    "Java Sign",
+                    "jwt Sign",
+                    "JSON"
+                  ]
+                },
+                "Arthur": {
+                  "example": "me"
                 }
               }
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -704,10 +578,20 @@
       },
       "get": {
         "tags": [
-          "Tenant Users"
+          "Questions"
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
+            "type": "string"
+          },
           {
             "name": "limit",
             "in": "query",
@@ -735,8 +619,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -747,15 +634,15 @@
         }
       }
     },
-    "/api/admin/user/{id}": {
+    "/api/question/{questionId}": {
       "put": {
         "tags": [
-          "Tenant Users"
+          "Questions"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "questionId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -766,25 +653,44 @@
             "schema": {
               "type": "object",
               "properties": {
-                "email": {
-                  "example": "string"
+                "quizId": {
+                  "example": "123"
                 },
-                "userName": {
-                  "example": "string"
+                "category": {
+                  "example": "Entertainment A Video Games"
                 },
-                "activeStatus": {
-                  "example": "boolean"
+                "type": {
+                  "example": "multiple"
                 },
-                "timezone": {
-                  "example": "string"
+                "difficulty": {
+                  "example": "hard ,medium , easy"
+                },
+                "question": {
+                  "example": "JS stands for"
+                },
+                "correct_answer": {
+                  "example": "JavaScript"
+                },
+                "incorrect_answers": {
+                  "example": [
+                    "Java Sign",
+                    "jwt Sign",
+                    "JSON"
+                  ]
+                },
+                "Arthur": {
+                  "example": "me"
                 }
               }
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -796,20 +702,23 @@
       },
       "delete": {
         "tags": [
-          "Tenant Users"
+          "Questions"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "questionId",
             "in": "path",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -820,17 +729,27 @@
         }
       }
     },
-    "/api/admin/tenant/user/{id}": {
+    "/api/question/quiz/{quizId}": {
       "get": {
         "tags": [
-          "Tenant Users"
+          "Questions"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "quizId",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
             "type": "string"
           },
           {
@@ -860,8 +779,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -872,10 +794,10 @@
         }
       }
     },
-    "/api/admin/assets": {
+    "/api/student": {
       "post": {
         "tags": [
-          "Tenant Assets"
+          "Student"
         ],
         "description": "",
         "parameters": [
@@ -885,34 +807,44 @@
             "schema": {
               "type": "object",
               "properties": {
-                "tenantId": {
-                  "example": "string"
+                "quizId": {
+                  "example": "123awsd"
                 },
-                "assetName": {
-                  "example": "string"
+                "category": {
+                  "example": "Entertainment A Video Games"
                 },
-                "assetType": {
-                  "example": "string"
+                "type": {
+                  "example": "multiple"
                 },
-                "model": {
-                  "example": "string"
+                "difficulty": {
+                  "example": "hard ,medium , easy"
                 },
-                "manufacturer": {
-                  "example": "string"
+                "question": {
+                  "example": "JS stands for"
                 },
-                "status": {
-                  "example": "string"
+                "correct_answer": {
+                  "example": "JavaScript"
                 },
-                "lastReportedLocation": {
-                  "example": "string"
+                "incorrect_answers": {
+                  "example": [
+                    "Java Sign",
+                    "jwt Sign",
+                    "JSON"
+                  ]
+                },
+                "Arthur": {
+                  "example": "me"
                 }
               }
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -924,14 +856,18 @@
       },
       "get": {
         "tags": [
-          "Tenant Assets"
+          "Student"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "assetType",
+            "name": "type",
             "in": "query",
-            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
             "type": "string"
           },
           {
@@ -961,8 +897,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -973,15 +912,15 @@
         }
       }
     },
-    "/api/admin/assets/{id}": {
+    "/api/student/{studentId}": {
       "put": {
         "tags": [
-          "Tenant Assets"
+          "Student"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "questionId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -992,31 +931,44 @@
             "schema": {
               "type": "object",
               "properties": {
-                "assetName": {
-                  "example": "string"
+                "quizId": {
+                  "example": "123"
                 },
-                "assetType": {
-                  "example": "string"
+                "category": {
+                  "example": "Entertainment A Video Games"
                 },
-                "model": {
-                  "example": "string"
+                "type": {
+                  "example": "multiple"
                 },
-                "manufacturer": {
-                  "example": "string"
+                "difficulty": {
+                  "example": "hard ,medium , easy"
                 },
-                "status": {
-                  "example": "string"
+                "question": {
+                  "example": "JS stands for"
                 },
-                "lastReportedLocation": {
-                  "example": "string"
+                "correct_answer": {
+                  "example": "JavaScript"
+                },
+                "incorrect_answers": {
+                  "example": [
+                    "Java Sign",
+                    "jwt Sign",
+                    "JSON"
+                  ]
+                },
+                "Arthur": {
+                  "example": "me"
                 }
               }
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -1028,20 +980,23 @@
       },
       "delete": {
         "tags": [
-          "Tenant Assets"
+          "Student"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "questionId",
             "in": "path",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -1053,14 +1008,24 @@
       },
       "get": {
         "tags": [
-          "Tenant Assets"
+          "Student"
         ],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "quizId",
             "in": "path",
             "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
             "type": "string"
           },
           {
@@ -1090,514 +1055,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/asset/attribute": {
-      "post": {
-        "tags": [
-          "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "assetId": {
-                  "example": "string"
-                },
-                "attributeName": {
-                  "example": "string"
-                },
-                "value": {
-                  "example": "string"
-                },
-                "unit": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/asset/attribute/{id}": {
-      "put": {
-        "tags": [
-          "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "attributeName": {
-                  "example": "string"
-                },
-                "value": {
-                  "example": "string"
-                },
-                "unit": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/status/type": {
-      "post": {
-        "tags": [
-          "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "statusName": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/status/type/{typeId}": {
-      "put": {
-        "tags": [
-          "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "typeId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "statusName": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "typeId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/status/table": {
-      "post": {
-        "tags": [
-          "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "tenantId": {
-                  "example": "string"
-                },
-                "assetId": {
-                  "example": "string"
-                },
-                "statusTypeId": {
-                  "example": "string"
-                },
-                "statusReason": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "pageNo",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "orderby",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "sortByField",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/admin/status/table/{tableId}": {
-      "put": {
-        "tags": [
-          "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "tableId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "tenantId": {
-                  "example": "string"
-                },
-                "assetId": {
-                  "example": "string"
-                },
-                "statusTypeId": {
-                  "example": "string"
-                },
-                "statusReason": {
-                  "example": "string"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "tableId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
