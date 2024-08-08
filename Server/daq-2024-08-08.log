@@ -1,0 +1,1040 @@
+2024-08-08 10:14:14.120 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:14:14.128 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:14:14 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 3220,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78905344,
+      "heapTotal": 59641856,
+      "heapUsed": 25924768,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 515.078
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:14:31.205 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:14:31.212 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:14:31 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 5780,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80359424,
+      "heapTotal": 59379712,
+      "heapUsed": 26397064,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 532.156
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:14:33.312 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:14:33.319 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:14:33 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 12428,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78872576,
+      "heapTotal": 59379712,
+      "heapUsed": 26372704,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 534.265
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:15:15.875 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:15:15.891 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:32:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:32:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:15:15 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 8316,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78774272,
+      "heapTotal": 59117568,
+      "heapUsed": 27523176,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 576.828
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 32,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:15:35.667 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:15:35.674 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:15:35 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 936,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78839808,
+      "heapTotal": 59117568,
+      "heapUsed": 27353536,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 596.625
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:15:59.962 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:15:59.983 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:15:59 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 1436,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78692352,
+      "heapTotal": 59117568,
+      "heapUsed": 27113512,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 620.906
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:16:03.810 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:16:03.818 [error]: 	uncaughtException: listen EADDRINUSE: address already in use :::8080
+Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (F:\SMIT-QUIZ\hachathone\Server\node_modules\express\lib\application.js:635:24)
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {
+    "code": "EADDRINUSE",
+    "errno": -4091,
+    "syscall": "listen",
+    "address": "::",
+    "port": 8080
+  },
+  "stack": "Error: listen EADDRINUSE: address already in use :::8080\n    at Server.setupListenHandle [as _listen2] (node:net:1898:16)\n    at listenInCluster (node:net:1946:12)\n    at Server.listen (node:net:2044:7)\n    at Function.listen (F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js:635:24)\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:31:5\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:16:03 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 9184,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78729216,
+      "heapTotal": 59117568,
+      "heapUsed": 27149400,
+      "external": 20824643,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 624.765
+  },
+  "trace": [
+    {
+      "column": 16,
+      "file": "node:net",
+      "function": "Server.setupListenHandle [as _listen2]",
+      "line": 1898,
+      "method": "setupListenHandle [as _listen2]",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:net",
+      "function": "listenInCluster",
+      "line": 1946,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:net",
+      "function": "Server.listen",
+      "line": 2044,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "F:\\SMIT-QUIZ\\hachathone\\Server\\node_modules\\express\\lib\\application.js",
+      "function": "Function.listen",
+      "line": 635,
+      "method": "listen",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 31,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:16:15.229 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:16:22.502 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:16:52.049 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:01.055 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:07.350 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:12.152 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:16.116 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:20.578 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:27.949 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:31.866 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:17:37.590 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:18:48.276 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:18:48.280 [error]: 	uncaughtException: swaggerUi is not defined
+ReferenceError: swaggerUi is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:22:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: swaggerUi is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:22:19\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:18:48 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 3576,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78815232,
+      "heapTotal": 59379712,
+      "heapUsed": 27117520,
+      "external": 20805456,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 789.218
+  },
+  "trace": [
+    {
+      "column": 19,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 22,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:19:27.565 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:19:27.569 [error]: 	uncaughtException: swaggerUi is not defined
+ReferenceError: swaggerUi is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:22:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: swaggerUi is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:22:19\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:19:27 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2964,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78675968,
+      "heapTotal": 59379712,
+      "heapUsed": 27253328,
+      "external": 20805456,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 828.515
+  },
+  "trace": [
+    {
+      "column": 19,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 22,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:19:31.690 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:19:31.696 [error]: 	uncaughtException: superAdminDocuments is not defined
+ReferenceError: superAdminDocuments is not defined
+    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:23:40
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5) {
+  "error": {},
+  "stack": "ReferenceError: superAdminDocuments is not defined\n    at file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js:23:40\n    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)",
+  "exception": true,
+  "date": "Thu Aug 08 2024 10:19:31 GMT+0500 (Pakistan Standard Time)",
+  "process": {
+    "pid": 2664,
+    "uid": null,
+    "gid": null,
+    "cwd": "F:\\SMIT-QUIZ\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.15.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "F:\\SMIT-QUIZ\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 78733312,
+      "heapTotal": 59641856,
+      "heapUsed": 26397848,
+      "external": 20805456,
+      "arrayBuffers": 18262671
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 832.64
+  },
+  "trace": [
+    {
+      "column": 40,
+      "file": "file:///F:/SMIT-QUIZ/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 23,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 222,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 316,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/modules/run_main",
+      "function": "async asyncRunEntryPointWithESMLoader",
+      "line": 123,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-08 10:26:02.081 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:26:03.839 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:26:06.154 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:27:22.721 [debug]: 	Logging initialized at debug level 
+2024-08-08 10:27:25.704 [debug]: 	Logging initialized at debug level 
