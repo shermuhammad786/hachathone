@@ -69,7 +69,7 @@ class QuizService {
 
 
 
-        const quiz = await QuizModel.find(query).limit(limit).skip(parseInt(limit) * (pageNo - 1)).sort(sort).lean()
+        const quiz = await QuizModel.find(query).populate("questions").limit(limit).skip(parseInt(limit) * (pageNo - 1)).sort(sort).lean()
 
         if (quiz) {
             return (sendMessage(true, "Quiz getted successfully", quiz))

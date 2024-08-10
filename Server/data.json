@@ -1,1129 +1,213 @@
-"/api/admin/user": {
-    "post": {
-        "tags": [
-            "Tenant Users"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "tenantId": {
-                            "example": "string"
-                        },
-                        "email": {
-                            "example": "string"
-                        },
-                        "roleId": {
-                            "example": "string"
-                        },
-                        "userName": {
-                            "example": "string"
-                        },
-                        "activeStatus": {
-                            "example": "boolean"
-                        },
-                        "timezone": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
+{
+    "metrics": {
+      "totalQuizzes": 10,
+      "totalStudents": 150,
+      "averageScore": 85,
+      "recentActivities": [
+        {
+          "id": 1,
+          "activity": "Quiz 'Math Basics' created"
+        },
+        {
+          "id": 2,
+          "activity": "Student John Doe completed 'Science Quiz'"
         }
+      ]
     },
-    "get": {
-        "tags": [
-            "Tenant Users"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
+    "quizzes": [
+      {
+        "id": "1",
+        "title": "Math Quiz",
+        "description": "Basic math quiz",
+        "course": "Mathematics",
+        "deadline": "2024-12-31",
+        "duration": 60,
+        "location_restriction": false,
+        "tab_switching_restriction": false,
+        "custom_mode": false,
+        "time_limits": {
+          "easy": 0,
+          "medium": 0,
+          "difficult": 0
+        },
+        "questions": [
+          {
+            "id": 1,
+            "type": "singleChoice",
+            "points": 3,
+            "difficulty": "easy",
+            "question": "What is 2+2?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "correct_answer": "4"
+          },
+          {
+            "id": 1,
+            "type": "singleChoice",
+            "points": 3,
+            "difficulty": "easy",
+            "question": "What is 2+3?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "correct_answer": "5"
+          },
+          {
+            "id": 1,
+            "type": "singleChoice",
+            "points": 3,
+            "difficulty": "easy",
+            "question": "What is 2+4?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "6"
+            ],
+            "correct_answer": "6"
+          }
+        ]
+      },
+      {
+        "id": "a188",
+        "title": "English Quiz",
+        "description": "This is an english quiz",
+        "course": "English",
+        "deadline": "2024-07-31T19:02",
+        "duration": "30",
+        "location_restriction": false,
+        "tab_switching_restriction": false,
+        "custom_mode": true,
+        "time_limits": {
+          "easy": 2,
+          "medium": 3,
+          "difficult": 4
+        },
+        "questions": [
+          {
+            "id": 1,
+            "type": "shortAnswer",
+            "points": 3,
+            "difficulty": "easy",
+            "question": "Who are you?",
+            "options": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Science Quiz",
+        "description": "Basic science quiz",
+        "course": "Science",
+        "deadline": "2024-12-31",
+        "duration": 60,
+        "location_restriction": false,
+        "tab_switching_restriction": false,
+        "custom_mode": false,
+        "time_limits": {
+          "easy": 0,
+          "medium": 0,
+          "difficult": 0
+        },
+        "questions": [
+          {
+            "id": 1,
+            "type": "singleChoice",
+            "points": 3,
+            "difficulty": "easy",
+            "question": "What is H2O?",
+            "options": [
+              "Water",
+              "Oxygen",
+              "Hydrogen",
+              "Carbon"
+            ],
+            "correct_answer": "Water"
+          }
+        ]
+      }
+    ],
+    "students": [
+      {
+        "id": "1",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "course": "Mathematics",
+        "batch": "2023",
+        "instructor": "Dr. Smith"
+      },
+      {
+        "id": "2",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "course": "Science",
+        "batch": "2023",
+        "instructor": "Dr. Johnson"
+      },
+      {
+        "id": "1723136363867",
+        "username": "hamza",
+        "email": "hamza@mail.com",
+        "password": "123456",
+        "course": "Mathematics",
+        "batch": 2024,
+        "instructor": "Dr. Johnson"
+      }
+    ],
+    "quizReports": [
+      {
+        "id": "1",
+        "quizId": "1",
+        "studentId": "1",
+        "score": 85,
+        "dateTaken": "2024-01-15",
+        "timeTaken": "30 minutes",
+        "flagged_questions": []
+      },
+      {
+        "id": "2",
+        "quizId": "1",
+        "studentId": "2",
+        "score": 90,
+        "dateTaken": "2024-01-16",
+        "timeTaken": "25 minutes",
+        "flagged_questions": []
+      },
+      {
+        "id": "3",
+        "quizId": "2",
+        "studentId": "1",
+        "score": 75,
+        "dateTaken": "2024-01-17",
+        "timeTaken": "45 minutes",
+        "flagged_questions": []
+      },
+      {
+        "id": "1723114235630",
+        "quizId": "1",
+        "studentId": "1",
+        "score": 100,
+        "dateTaken": "2024-08-08",
+        "timeTaken": "0 minutes 0 seconds",
+        "flagged_questions": []
+      }
+    ],
+    "settings": {
+      "siteName": "QuizMaster",
+      "adminEmail": "admin@quizmaster.com",
+      "userRoles": [
+        "admin",
+        "student",
+        "guest"
+      ]
     }
-},
-"/api/admin/user/{id}": {
-    "put": {
-        "tags": [
-            "Tenant Users"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "email": {
-                            "example": "string"
-                        },
-                        "userName": {
-                            "example": "string"
-                        },
-                        "activeStatus": {
-                            "example": "boolean"
-                        },
-                        "timezone": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Tenant Users"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/tenant/user/{id}": {
-    "get": {
-        "tags": [
-            "Tenant Users"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/assets": {
-    "post": {
-        "tags": [
-            "Tenant Assets"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "tenantId": {
-                            "example": "string"
-                        },
-                        "assetName": {
-                            "example": "string"
-                        },
-                        "assetType": {
-                            "example": "string"
-                        },
-                        "model": {
-                            "example": "string"
-                        },
-                        "manufacturer": {
-                            "example": "string"
-                        },
-                        "status": {
-                            "example": "string"
-                        },
-                        "lastReportedLocation": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Tenant Assets"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "assetType",
-                "in": "query",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/assets/{id}": {
-    "put": {
-        "tags": [
-            "Tenant Assets"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "assetName": {
-                            "example": "string"
-                        },
-                        "assetType": {
-                            "example": "string"
-                        },
-                        "model": {
-                            "example": "string"
-                        },
-                        "manufacturer": {
-                            "example": "string"
-                        },
-                        "status": {
-                            "example": "string"
-                        },
-                        "lastReportedLocation": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Tenant Assets"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Tenant Assets"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/asset/attribute": {
-    "post": {
-        "tags": [
-            "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "assetId": {
-                            "example": "string"
-                        },
-                        "attributeName": {
-                            "example": "string"
-                        },
-                        "value": {
-                            "example": "string"
-                        },
-                        "unit": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/asset/attribute/{id}": {
-    "put": {
-        "tags": [
-            "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "attributeName": {
-                            "example": "string"
-                        },
-                        "value": {
-                            "example": "string"
-                        },
-                        "unit": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Assets Attributes"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/status/type": {
-    "post": {
-        "tags": [
-            "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "statusName": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/status/type/{typeId}": {
-    "put": {
-        "tags": [
-            "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "typeId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "statusName": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Status Type"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "typeId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/status/table": {
-    "post": {
-        "tags": [
-            "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "tenantId": {
-                            "example": "string"
-                        },
-                        "assetId": {
-                            "example": "string"
-                        },
-                        "statusTypeId": {
-                            "example": "string"
-                        },
-                        "statusReason": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "get": {
-        "tags": [
-            "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/status/table/{tableId}": {
-    "put": {
-        "tags": [
-            "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "tableId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "body",
-                "in": "body",
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "tenantId": {
-                            "example": "string"
-                        },
-                        "assetId": {
-                            "example": "string"
-                        },
-                        "statusTypeId": {
-                            "example": "string"
-                        },
-                        "statusReason": {
-                            "example": "string"
-                        }
-                    }
-                }
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Status Table"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "tableId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"/api/admin/assign/asset/logs": {
-    "get": {
-        "tags": [
-            "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "201": {
-                "description": "Created"
-            },
-            "400": {
-                "description": "Bad Request"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/assign/asset/{assetId}": {
-    "get": {
-        "tags": [
-            "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "limit",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "pageNo",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "search",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "orderby",
-                "in": "query",
-                "type": "string"
-            },
-            {
-                "name": "sortByField",
-                "in": "query",
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "201": {
-                "description": "Created"
-            },
-            "400": {
-                "description": "Bad Request"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
-"/api/admin/assign/asset/{assetId}/{userId}": {
-    "post": {
-        "tags": [
-            "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "userId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    },
-    "delete": {
-        "tags": [
-            "Asset Assignment"
-        ],
-        "description": "",
-        "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            },
-            {
-                "name": "userId",
-                "in": "path",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "401": {
-                "description": "Unauthorized"
-            },
-            "500": {
-                "description": "Internal Server Error"
-            }
-        }
-    }
-},
+  }

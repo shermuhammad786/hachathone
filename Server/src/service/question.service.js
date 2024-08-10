@@ -1,12 +1,16 @@
 import { sendMessage } from '../helpers/sendMessage.js';
 import { QuestionModel } from '../models/questionModel.js';
+import { QuizModel } from '../models/quizModel.js';
 
 class questionService {
 
     createQuestionService = async (req) => {
-
+        const {quizId} = req.params;
+        const quiz = await QuizModel.findById(req.body.quizId); 
         const newQuestion = new QuestionModel(req.body);
         const savedQuestion = await newQuestion.save();
+        await quiz.questions.push(savedQuestion._id)
+        await quiz.save();
 
         if (savedQuestion) {
             return sendMessage(true, "Question saved successfully", savedQuestion)
@@ -19,10 +23,9 @@ class questionService {
 
         const { limit = 10, pageNo = 1, search = "", orderby, sortByField, difficulty, type } = req.query;
 
-
         let conditions = [];
         conditions.push({ type: { $regex: search, $options: 'i' } });
-        conditions.push({ category: { $regex: search, $options: 'i' } });
+        conditions.push({ points: { $regex: search, $options: 'i' } });
         conditions.push({ difficulty: { $regex: search, $options: 'i' } });
         conditions.push({ question: { $regex: search, $options: 'i' } });
         conditions.push({ correct_answer: { $regex: search, $options: 'i' } });
@@ -58,7 +61,7 @@ class questionService {
 
         let conditions = [];
         conditions.push({ type: { $regex: search, $options: 'i' } });
-        conditions.push({ category: { $regex: search, $options: 'i' } });
+        conditions.push({ points: { $regex: search, $options: 'i' } });
         conditions.push({ difficulty: { $regex: search, $options: 'i' } });
         conditions.push({ question: { $regex: search, $options: 'i' } });
         conditions.push({ correct_answer: { $regex: search, $options: 'i' } });

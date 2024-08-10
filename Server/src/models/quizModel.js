@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-
-
 const QuizSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -23,23 +21,27 @@ const QuizSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    locationRestriction: {
+    location_restriction: {
         type: Boolean,
         require: true
     },
-    tabSwitchingRestriction: {
+    tab_switching_restriction: {
         type: Boolean,
         require: true
     },
-    customMode: {
+    custom_mode: {
         type: Boolean,
         require: true
     },
-    timeLimits: {
+    time_limits: {
         type: String,
         enum: ["easy", "medium", "difficult"],
         require: true
     },
+    questions: {
+        type:[String],
+        ref:"Questions"
+    }
 },
     { timestamps: true }
 )

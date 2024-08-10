@@ -8,7 +8,7 @@ const studenQuestionRouter = Router();
 
 questionRouter.post('/', jwtAuth, authorizeRole("superAdmin"), createQuestion);
 questionRouter.get('/', jwtAuth, authorizeRole("superAdmin"), getQuestion);
-questionRouter.get('quiz/:quizId', jwtAuth, authorizeRole("superAdmin"), getQuizQuestion);
+questionRouter.get('/quiz/:quizId', jwtAuth, authorizeRole("superAdmin"), getQuizQuestion);
 questionRouter.put('/:questionId', jwtAuth, authorizeRole("superAdmin"), updateQuestion);
 questionRouter.delete('/:questionId', jwtAuth, authorizeRole("superAdmin"), deleteQuestion);
 

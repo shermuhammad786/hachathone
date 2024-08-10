@@ -1,0 +1,885 @@
+2024-08-10 00:02:27.728 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:02:37.050 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:02:38.844 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:02:42.182 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:02:49.467 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:02:58.121 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:03:03.600 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:03.077 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:04.934 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:21.869 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:34.532 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:40.841 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:51.041 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:05:57.261 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:06:02.012 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:06:04.564 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:06:07.507 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:06:14.643 [debug]: 	Logging initialized at debug level 
+2024-08-10 00:06:36.751 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:08:25.355 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:09:38.328 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:10:02.594 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:10:12.371 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:12:04.812 [info]: 	token is not valid TokenExpiredError: jwt expired 
+2024-08-10 01:12:14.588 [info]: 	login successfull superadmin@gmail.com 
+2024-08-10 01:12:38.099 [info]: 	Quiz created successfully superadmin@gmail.com 
+2024-08-10 01:14:02.611 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:14:18.186 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:02.128 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:29.472 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:39.800 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:42.699 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:44.512 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:15:51.113 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:16:49.921 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:16:54.805 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:08.893 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:15.471 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:21.234 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:36.076 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:44.429 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:48.473 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:17:53.266 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:18:12.879 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:18:48.142 [info]: 	login successfull superadmin@gmail.com 
+2024-08-10 01:19:27.015 [error]: 	Internal server error create {
+  "body": {
+    "errors": {
+      "points": {
+        "name": "ValidatorError",
+        "message": "`3` is not a valid enum value for path `points`.",
+        "properties": {
+          "message": "`3` is not a valid enum value for path `points`.",
+          "type": "enum",
+          "enumValues": [
+            "multiple",
+            "single"
+          ],
+          "path": "points",
+          "value": "3"
+        },
+        "kind": "enum",
+        "path": "points",
+        "value": "3"
+      }
+    },
+    "_message": "Questions validation failed",
+    "name": "ValidationError",
+    "message": "Questions validation failed: points: `3` is not a valid enum value for path `points`."
+  }
+}
+2024-08-10 01:19:27.034 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:19:27 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 14260,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 70451200,
+      "heapTotal": 31965184,
+      "heapUsed": 29866248,
+      "external": 20994299,
+      "arrayBuffers": 18368838
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 53153.734
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:20:38.556 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:20:41.498 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:20:56.433 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:21:02.688 [error]: 	Internal server error create {
+  "body": {}
+}
+2024-08-10 01:21:02.697 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:21:02 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 12948,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 85979136,
+      "heapTotal": 63946752,
+      "heapUsed": 31860120,
+      "external": 20991949,
+      "arrayBuffers": 18365373
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 53249.39
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:22:13.828 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:22:15.734 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:22:21.977 [error]: 	Internal server error create {
+  "body": {
+    "errorResponse": {
+      "index": 0,
+      "code": 11000,
+      "errmsg": "E11000 duplicate key error collection: test.questions index: quizId_1 dup key: { quizId: \"66b6b0754c8ee734f98c1be4\" }",
+      "keyPattern": {
+        "quizId": 1
+      },
+      "keyValue": {
+        "quizId": "66b6b0754c8ee734f98c1be4"
+      }
+    },
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "quizId": 1
+    },
+    "keyValue": {
+      "quizId": "66b6b0754c8ee734f98c1be4"
+    }
+  }
+}
+2024-08-10 01:22:21.986 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:22:21 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 14236,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84754432,
+      "heapTotal": 63684608,
+      "heapUsed": 31744584,
+      "external": 21000630,
+      "arrayBuffers": 18374054
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 53328.687
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:24:38.099 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:25:08.545 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:25:17.637 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:25:25.449 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:25:33.323 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-10 01:26:36.448 [error]: 	Internal server error create {
+  "body": {
+    "errorResponse": {
+      "index": 0,
+      "code": 11000,
+      "errmsg": "E11000 duplicate key error collection: test.questions index: quizId_1 dup key: { quizId: \"66b6b0754c8ee734f98c1be4\" }",
+      "keyPattern": {
+        "quizId": 1
+      },
+      "keyValue": {
+        "quizId": "66b6b0754c8ee734f98c1be4"
+      }
+    },
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "quizId": 1
+    },
+    "keyValue": {
+      "quizId": "66b6b0754c8ee734f98c1be4"
+    }
+  }
+}
+2024-08-10 01:26:36.471 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:26:36 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 12140,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 71266304,
+      "heapTotal": 31965184,
+      "heapUsed": 29110640,
+      "external": 20963473,
+      "arrayBuffers": 18338012
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 53583.171
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:27:07.876 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:27:13.542 [error]: 	Internal server error create {
+  "body": {
+    "errorResponse": {
+      "index": 0,
+      "code": 11000,
+      "errmsg": "E11000 duplicate key error collection: test.questions index: quizId_1 dup key: { quizId: \"66b6b0754c8ee734f98c1be4\" }",
+      "keyPattern": {
+        "quizId": 1
+      },
+      "keyValue": {
+        "quizId": "66b6b0754c8ee734f98c1be4"
+      }
+    },
+    "index": 0,
+    "code": 11000,
+    "keyPattern": {
+      "quizId": 1
+    },
+    "keyValue": {
+      "quizId": "66b6b0754c8ee734f98c1be4"
+    }
+  }
+}
+2024-08-10 01:27:13.562 [error]: 	uncaughtException: sendMessage is not defined
+ReferenceError: sendMessage is not defined
+    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  "error": {},
+  "stack": "ReferenceError: sendMessage is not defined\n    at createQuestion (file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js:21:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:27:13 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 13192,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 84713472,
+      "heapTotal": 63422464,
+      "heapUsed": 31600696,
+      "external": 20984938,
+      "arrayBuffers": 18358362
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 53620.265
+  },
+  "trace": [
+    {
+      "column": 24,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/controllers/question.controller.js",
+      "function": "createQuestion",
+      "line": 21,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "process.processTicksAndRejections",
+      "line": 95,
+      "method": "processTicksAndRejections",
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:28:07.228 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:28:29.821 [info]: 	Question saved successfully superadmin@gmail.com 
+2024-08-10 01:28:56.095 [info]: 	Question getted successfully superadmin@gmail.com 
+2024-08-10 01:29:16.138 [info]: 	Quiz getted successfully superadmin@gmail.com 
+2024-08-10 01:37:27.585 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:37:33.208 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:37:40.793 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:37:52.100 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:38:05.122 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:38:35.505 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:38:43.073 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:38:51.513 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:39:03.549 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:42:51.298 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:43:51.612 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:43:55.659 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-10 01:44:11.913 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:44:16.565 [info]: 	Question getted by id successfully superadmin@gmail.com 
+2024-08-10 01:54:23.520 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:54:27.122 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:54:47.445 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:55:06.197 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:55:24.848 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:55:30.775 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:55:58.903 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:56:28.943 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:56:28.950 [error]: 	uncaughtException: quizReportRoutes is not defined
+ReferenceError: quizReportRoutes is not defined
+    at file:///D:/aaaaaa/hachathone/Server/src/index.js:51:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12) {
+  "error": {},
+  "stack": "ReferenceError: quizReportRoutes is not defined\n    at file:///D:/aaaaaa/hachathone/Server/src/index.js:51:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:56:28 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 8656,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80375808,
+      "heapTotal": 59858944,
+      "heapUsed": 32916632,
+      "external": 20831647,
+      "arrayBuffers": 18262663
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 55375.656
+  },
+  "trace": [
+    {
+      "column": 17,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 51,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 218,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 329,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:internal/process/esm_loader",
+      "function": "async loadESM",
+      "line": 28,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/run_main",
+      "function": "async handleMainPromise",
+      "line": 113,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:56:30.639 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:56:30.647 [error]: 	uncaughtException: quizReportRoutes is not defined
+ReferenceError: quizReportRoutes is not defined
+    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12) {
+  "error": {},
+  "stack": "ReferenceError: quizReportRoutes is not defined\n    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:56:30 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 2780,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80420864,
+      "heapTotal": 59334656,
+      "heapUsed": 33924888,
+      "external": 20831810,
+      "arrayBuffers": 18262663
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 55377.343
+  },
+  "trace": [
+    {
+      "column": 17,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 52,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 218,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 329,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:internal/process/esm_loader",
+      "function": "async loadESM",
+      "line": 28,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/run_main",
+      "function": "async handleMainPromise",
+      "line": 113,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:56:34.399 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:56:34.408 [error]: 	uncaughtException: quizReportRoutes is not defined
+ReferenceError: quizReportRoutes is not defined
+    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12) {
+  "error": {},
+  "stack": "ReferenceError: quizReportRoutes is not defined\n    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:56:34 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 12372,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80642048,
+      "heapTotal": 59334656,
+      "heapUsed": 34214232,
+      "external": 20831810,
+      "arrayBuffers": 18262663
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 55381.109
+  },
+  "trace": [
+    {
+      "column": 22,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 52,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 218,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 329,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:internal/process/esm_loader",
+      "function": "async loadESM",
+      "line": 28,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/run_main",
+      "function": "async handleMainPromise",
+      "line": 113,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:56:58.659 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:56:58.667 [error]: 	uncaughtException: quizReportRoutes is not defined
+ReferenceError: quizReportRoutes is not defined
+    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12) {
+  "error": {},
+  "stack": "ReferenceError: quizReportRoutes is not defined\n    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:56:58 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 8920,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80805888,
+      "heapTotal": 59334656,
+      "heapUsed": 34363280,
+      "external": 20831810,
+      "arrayBuffers": 18262663
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 55405.359
+  },
+  "trace": [
+    {
+      "column": 22,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 52,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 218,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 329,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:internal/process/esm_loader",
+      "function": "async loadESM",
+      "line": 28,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/run_main",
+      "function": "async handleMainPromise",
+      "line": 113,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-10 01:57:01.555 [debug]: 	Logging initialized at debug level 
+2024-08-10 01:57:01.564 [error]: 	uncaughtException: quizReportRoutes is not defined
+ReferenceError: quizReportRoutes is not defined
+    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async loadESM (node:internal/process/esm_loader:28:7)
+    at async handleMainPromise (node:internal/modules/run_main:113:12) {
+  "error": {},
+  "stack": "ReferenceError: quizReportRoutes is not defined\n    at file:///D:/aaaaaa/hachathone/Server/src/index.js:52:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)\n    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)\n    at async loadESM (node:internal/process/esm_loader:28:7)\n    at async handleMainPromise (node:internal/modules/run_main:113:12)",
+  "exception": true,
+  "date": "Sat Aug 10 2024 01:57:01 GMT+0100 (British Summer Time)",
+  "process": {
+    "pid": 7764,
+    "uid": null,
+    "gid": null,
+    "cwd": "D:\\aaaaaa\\hachathone\\Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v20.11.1",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\aaaaaa\\hachathone\\Server\\src\\index.js"
+    ],
+    "memoryUsage": {
+      "rss": 80785408,
+      "heapTotal": 59334656,
+      "heapUsed": 34426504,
+      "external": 20831810,
+      "arrayBuffers": 18262663
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 55408.265
+  },
+  "trace": [
+    {
+      "column": 22,
+      "file": "file:///D:/aaaaaa/hachathone/Server/src/index.js",
+      "function": null,
+      "line": 52,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "node:internal/modules/esm/module_job",
+      "function": "ModuleJob.run",
+      "line": 218,
+      "method": "run",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/esm/loader",
+      "function": "async ModuleLoader.import",
+      "line": 329,
+      "method": "import",
+      "native": false
+    },
+    {
+      "column": 7,
+      "file": "node:internal/process/esm_loader",
+      "function": "async loadESM",
+      "line": 28,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/run_main",
+      "function": "async handleMainPromise",
+      "line": 113,
+      "method": null,
+      "native": false
+    }
+  ]
+}
+2024-08-10 02:11:36.956 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:11:55.019 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:14:05.897 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:14:40.147 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:14:42.840 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:15:46.801 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:16:23.342 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:17:04.209 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:17:18.446 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:18:24.475 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:18:43.037 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:18:44.749 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:19:09.994 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:19:25.654 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:19:29.035 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:19:34.403 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:20:14.519 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:20:51.367 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:21:39.548 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:21:45.356 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:06.027 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:09.572 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:19.636 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:25.094 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:29.628 [debug]: 	Logging initialized at debug level 
+2024-08-10 02:22:43.309 [debug]: 	Logging initialized at debug level 

@@ -15,6 +15,7 @@ import guest from "./guest.json" assert  { type: "json" };
 import roleTableRoutes from './routes/roleRoutes.js';
 import questionRouter, { studenQuestionRouter } from './routes/question.routes.js';
 import studentRouter from './routes/student.routes.js';
+import quizReportRoutes from './routes/quizReport.routes.js';
 
 const PORT = environments.PORT
 
@@ -48,6 +49,10 @@ app.use("/api/question", questionRouter);
 app.use("/api/student", studenQuestionRouter);
 
 app.use("/api/student", studentRouter)
+
+app.use('/api/quiz', quizReportRoutes);
+
+
 
 app.listen(PORT, () => {
     console.log("server is running on PORT " + PORT)
